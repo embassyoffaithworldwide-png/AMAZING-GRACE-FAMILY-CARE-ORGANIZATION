@@ -1,0 +1,7886 @@
+/* =========================================================
+   CHURCH WEBSITE
+   PREMIUM GLOBAL STYLES
+   HABIYE-INSPIRED BLUE / ORANGE BRANDING
+   LIGHT + DARK MODE
+   ========================================================= */
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+   /* Universal box-sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+
+    --primary: #0f62fe;
+    --primary-dark:  #050a12;
+    --primary-deep: #0043ce;
+
+    --accent: #f97316;
+    --accent-light: #fb923c;
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --text: black;
+    --muted: #667085;
+    font-display: swap;
+
+    /* MAIN PAGE BACKGROUND */
+    --background: #8D0F7B;
+ font-family: "Segoe UI", Arial, sans-serif;
+    /* OTHER SECTIONS */
+    --surface: #ffffff;
+    --surface-alt: #eef5ff;
+
+    --border: #e4e7ec;
+
+    --footer: #050a12;
+
+    --success: #16803c;
+    --danger: #dc2626;
+
+    --container: 1200px;
+
+    --shadow:
+        0 10px 35px rgba(15, 98, 254, 0.10);
+
+    --shadow-lg:
+        0 20px 50px rgba(11, 18, 32, 0.14);
+
+    --transition:
+        all 0.3s ease;
+
+    /* AGFC BRAND COLORS */
+    --agfc-yellow: #facc15;
+    --agfc-yellow-dark: #fde047;
+
+    /* LIGHT MODE TEXT FOR MAGENTA SECTIONS */
+    --agfc-light-text: rgba(255, 255, 255, 0.82);
+
+        --paragraph-color: #f3f4f6;
+
+        --paragraph-color: rgba(255, 255, 255, 0.88);
+}
+
+
+@font-face {
+   font-family: "Segoe UI", Arial, sans-serif;
+    src: url("fonts/site-font-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+ font-family: "Segoe UI", Arial, sans-serif;
+    src: url("fonts/site-font-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+[data-theme="dark"],
+.dark-theme {
+
+    --primary: #4d8dff;
+    --primary-dark:#000000;
+    --primary-deep: #0043ce;
+
+    --accent: #ff8a3d;
+    --accent-light: #ffad70;
+
+    --white: #f8fafc;
+    --black: #000000;
+
+    --text: #f1f5f9;
+    --muted: #a8b2c1;
+
+    /* MAIN PAGE BACKGROUND */
+    --background: #8D0F7B;
+
+    /* OTHER SECTIONS */
+    --surface: #000000;
+    --surface-alt:#000000;
+
+    --border: #202b3b;
+
+    /* PURE BLACK HEADER AND FOOTER */
+    --header: #000000;
+    --footer: #000000;
+
+    --shadow:
+        0 10px 35px rgba(0, 0, 0, 0.35);
+
+    --shadow-lg:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    --paragraph-color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+   
+
+    color: var(--text);
+
+    background: var(--background);
+
+    line-height: 1.6;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    width:
+        min(92%, var(--container));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.top-bar {
+
+    background:
+        var(--primary-dark);
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+}
+
+
+.top-bar-inner {
+
+    min-height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.top-info {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.top-contact a {
+
+    color:
+        var(--accent-light);
+
+    font-weight: 600;
+
+    transition:
+        var(--transition);
+}
+
+
+.top-contact a:hover {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+
+    background:
+        var(--surface);
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        0 2px 15px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.nav-inner {
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+/* =========================
+   CHURCH LOGO / NAVIGATION
+========================= */
+
+.church-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Logo image */
+.logo-symbol {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+.logo-symbol img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0%;
+}
+
+/* Logo text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* AGFC */
+.logo-text strong {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+
+
+.logo-text span {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+/* =========================================================
+   DESKTOP NAV
+   ========================================================= */
+
+.desktop-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-left: auto;
+}
+
+
+.desktop-nav a {
+
+    position: relative;
+
+    color:
+        var(--text);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        var(--transition);
+}
+
+
+.desktop-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background:
+        var(--accent);
+
+    transition:
+        var(--transition);
+}
+
+
+.desktop-nav a:hover {
+
+    color:
+        var(--primary);
+}
+
+
+.desktop-nav a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   NAV ACTIONS
+   ========================================================= */
+
+.nav-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    border-radius: 50%;
+}
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+    color: var(--text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+/* Actual theme image */
+
+.theme-toggle-img {
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Dark mode image visibility */
+
+html[data-theme="dark"] .theme-toggle-img,
+body[data-theme="dark"] .theme-toggle-img {
+    filter: invert(1);
+        border-color: white;
+}
+
+/* =========================================================
+   GIVE BUTTON
+   ========================================================= */
+
+.give-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        11px 23px;
+
+    border-radius: 6px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #ea580c
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        var(--transition);
+
+
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background:
+        transparent;
+
+    cursor: pointer;
+
+    width: 42px;
+    height: 42px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.mobile-menu-btn span {
+
+    width: 24px;
+
+    height: 2px;
+
+    background:
+        var(--primary);
+
+    transition:
+        var(--transition);
+}
+
+
+.mobile-menu-btn.active
+span:nth-child(1) {
+
+    transform:
+        rotate(45deg)
+        translate(5px, 5px);
+}
+
+
+.mobile-menu-btn.active
+span:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+.mobile-menu-btn.active
+span:nth-child(3) {
+
+    transform:
+        rotate(-45deg)
+        translate(5px, -5px);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+
+    display: none;
+
+    background:
+        var(--surface);
+
+    border-top:
+        1px solid
+        var(--border);
+
+    padding:
+        15px 5%;
+}
+
+
+.mobile-menu a {
+
+    display: block;
+
+    padding:
+        13px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    color:
+        var(--text);
+
+    font-weight: 500;
+
+    transition:
+        var(--transition);
+}
+
+
+.mobile-menu a:hover {
+
+    color:
+        var(--primary);
+}
+
+
+.mobile-menu.active {
+    display: block;
+}
+
+
+.mobile-give {
+
+    margin-top: 12px;
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff !important;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   MOBILE THEME ROW
+   ========================================================= */
+
+.mobile-theme-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        18px 0;
+
+    color:
+        var(--text);
+
+    font-weight: 600;
+}
+
+
+.mobile-theme-row
+.theme-toggle {
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+
+    background:
+        var(--footer);
+
+    color:
+        rgba(255,255,255,0.72);
+
+    margin-top: 80px;
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 55px;
+
+    padding-top: 70px;
+
+    padding-bottom: 60px;
+}
+
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.footer-column h3 {
+
+    color:
+        #ffffff;
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-column a {
+
+    transition:
+        var(--transition);
+}
+
+
+.footer-column a:hover {
+
+    color:
+        var(--accent-light);
+}
+
+
+.footer-about p {
+
+    max-width: 350px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-logo-symbol {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.footer-logo strong {
+
+    display: block;
+
+    color:
+        #ffffff;
+
+    font-size: 16px;
+}
+
+
+.footer-logo span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--accent-light);
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.social-links {
+
+    display: flex;
+
+    gap: 9px;
+
+    margin-top: 0px;
+}
+
+
+.social-links a {
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        white;
+
+    font-weight: bold;
+
+    transition:
+        var(--transition);
+}
+
+
+.social-links a:hover {
+
+    background:
+        var(--accent);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   SERVICE TIMES
+   ========================================================= */
+
+.service-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 8px;
+}
+
+
+.service-item strong {
+
+    color:
+        #ffffff;
+
+    font-size: 14px;
+}
+
+
+.service-item span {
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   ========================================================= */
+
+.footer-bottom {
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+
+.footer-bottom-inner {
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 12px;
+}
+
+
+
+
+/* =========================================================
+   HOMEPAGE - HERO
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    background-image:
+        url("logo 2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color:
+        #ffffff;
+
+    padding:
+        100px 0;
+}
+
+
+.hero-small {
+
+    display: inline-block;
+
+    color:white;
+
+            font-family:Georgia,serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    max-width: 700px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(48px, 7vw, 82px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    color:
+        #ffffff;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color:
+        var(--primary);
+}
+
+
+.hero p {
+
+    max-width: 570px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color:
+        #ffffff;
+
+    margin-bottom: 32px;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+.hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        13px 25px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    transition:
+        var(--transition);
+}
+
+
+.hero-btn.primary {
+
+    background:
+         var(--accent);
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 8px 22px
+        rgba(15, 98, 254, 0.28);
+}
+
+
+.hero-btn.primary:hover {
+
+    background:
+        var(--accent);
+}
+
+
+.hero-btn.secondary {
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--primary);
+
+    color:
+        var(--primary);
+}
+
+
+.hero-btn.secondary:hover {
+
+    background:
+        #ffffff;
+
+    color:
+        var(--primary);
+}
+
+
+/* =========================================================
+   SECTION GLOBAL
+   ========================================================= */
+
+.welcome-section,
+.services-section,
+.ministries-preview {
+
+    padding:
+        100px 0;
+}
+
+
+.section-label {
+
+    color:
+        var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-heading h2,
+.welcome-content h2 {
+
+    color:
+        var(--text);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(32px, 4vw, 48px);
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2
+{
+color:black;
+
+}
+
+
+
+
+.section-heading p,
+.welcome-content p,
+.ministry-content p {
+
+    color:
+        var(--muted);
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+
+.welcome-image img {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.welcome-content h2 span {
+
+    display: block;
+
+    color:
+        var(--accent);
+}
+
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color:
+        var(--primary);
+
+    font-weight: 700;
+}
+
+
+.text-link:hover {
+
+    color:
+        var(--accent);
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services-section {
+
+    background:
+        var(--surface-alt);
+}
+
+
+.service-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.service-card {
+
+    background:
+        var(--surface);
+
+    padding:
+        40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    transition:
+        var(--transition);
+}
+
+
+.service-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+
+    border-color:
+        transparent;
+}
+
+
+.service-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin:
+        0 auto 20px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(249,115,22,0.12);
+
+    color:
+        var(--accent);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.service-card h3 {
+
+    color:
+        var(--primary);
+
+    margin-bottom: 8px;
+}
+
+
+.service-card p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+}
+
+
+.service-card strong {
+
+    color:
+        var(--accent);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MINISTRIES
+   ========================================================= */
+
+.ministry-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.ministry-card {
+
+  background-color: #F5F5F5;
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.07);
+
+    transition:
+        var(--transition);
+}
+
+
+.ministry-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.ministry-card img {
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+}
+
+
+.ministry-content {
+
+    padding:
+        25px;
+}
+
+
+.ministry-content > span {
+
+    color:
+        var(--accent);
+        
+            font-family:Georgia, serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.ministry-content h3 {
+
+    color:black;
+
+    font-family: Georgia,serif;
+
+    font-size: 24px;
+
+    margin:
+        7px 0;
+}
+
+
+.dark-theme .ministry-content h3 
+{
+  color: white;
+    
+}
+
+
+.ministry-content p {
+
+    color:
+        var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+.ministry-content a {
+
+    color:
+        var(--primary);
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.church-cta {
+margin-top: 5rem;
+    padding:
+        110px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11,18,32,0.97),
+            rgba(15,98,254,0.88)
+        ),
+        url("assets/images/church-cta.jpg")
+        center / cover;
+}
+
+
+.cta-content {
+
+    color:
+        #ffffff;
+}
+
+
+.cta-content > span {
+
+    color:
+        var(--accent-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.cta-content h2 {
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    margin:
+        15px 0;
+}
+
+
+.cta-content p {
+
+    color:
+        rgba(255,255,255,0.82);
+
+    max-width: 550px;
+
+    margin-bottom: 25px;
+}
+
+
+.cta-button {
+
+    display: inline-block;
+
+    padding:
+        14px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #ea580c
+        );
+
+    color:
+        white;
+
+    border-radius:
+        6px;
+
+    font-weight:
+        700;
+
+    transition:
+        var(--transition);
+
+    box-shadow:
+        0 8px 20px
+        rgba(249,115,22,0.22);
+}
+
+
+.cta-button:hover {
+
+    background:
+        white;
+
+    color:
+        var(--primary);
+}
+
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.page-hero {
+
+    padding:
+        150px 0 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary-deep)
+        );
+
+    color:
+        #ffffff;
+
+    text-align:
+        center;
+}
+
+
+.page-hero-label {
+
+    display:
+        inline-block;
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--accent-light);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+}
+
+
+.page-hero h1 {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto 20px;
+
+    font-size:
+        clamp(42px, 6vw, 72px);
+
+    line-height:
+        1.05;
+}
+
+
+.page-hero h1 span {
+
+    color:
+        var(--accent-light);
+}
+
+
+.page-hero p {
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,0.78);
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ABOUT INTRO
+   ========================================================= */
+
+.about-intro {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--background);
+}
+
+
+.about-intro-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+.about-intro-image img {
+
+    width:
+        100%;
+
+    height:
+        520px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.about-intro-content h2,
+.story-content h2 {
+
+    margin:
+        12px 0 25px;
+
+    font-size:
+        clamp(34px, 4vw, 52px);
+
+    line-height:
+        1.1;
+
+    color:
+        var(--text);
+}
+
+
+.about-intro-content h2 span,
+.story-content h2 span {
+
+    color:
+        var(--primary);
+}
+
+
+.about-intro-content p,
+.story-content p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   MISSION
+   ========================================================= */
+
+.mission-section {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--surface-alt);
+}
+
+
+.mission-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+    margin-top:
+        50px;
+}
+
+
+.mission-card {
+
+    padding:
+        40px 30px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    text-align:
+        center;
+
+    transition:
+        var(--transition);
+}
+
+
+.mission-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.mission-icon {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    margin:
+        0 auto 25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--surface-alt);
+
+    color:
+        var(--primary);
+
+    font-size:
+        28px;
+}
+
+
+.mission-card h3 {
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--text);
+
+    font-size:
+        22px;
+}
+
+
+.mission-card p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.story-section {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--background);
+}
+
+
+.story-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+.story-image img {
+
+    width:
+        100%;
+
+    height:
+        500px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        var(--shadow-lg);
+}
+/* =========================================================
+   EARLY FOUNDING TEAM
+   ========================================================= */
+
+.beliefs-section {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--surface);
+}
+
+
+/* =========================================================
+   FOUNDING TEAM GRID
+   ========================================================= */
+
+.beliefs-list {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        center;
+
+    gap:
+        30px;
+
+    max-width:
+        1200px;
+
+    margin:
+        55px auto 0;
+}
+
+
+/* =========================================================
+   INDIVIDUAL TEAM MEMBER
+   ========================================================= */
+
+.belief-item {
+
+    flex:
+        1 1 250px;
+
+    max-width:
+        270px;
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    text-align:
+        center;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+}
+
+
+/* =========================================================
+   MEMBER IMAGE
+   ========================================================= */
+
+.belief-image {
+
+    width:
+        100%;
+
+    height:
+        280px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--surface-alt);
+
+    margin-bottom:
+        20px;
+}
+
+
+.belief-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.belief-item:hover .belief-image img {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =========================================================
+   MEMBER CONTENT
+   ========================================================= */
+
+.belief-content {
+
+    width:
+        100%;
+}
+
+
+.belief-item h3 {
+
+    margin:
+        0 0 10px;
+
+    color:
+        var(--text);
+
+    font-size:
+        21px;
+
+    line-height:
+        1.3;
+}
+
+
+.belief-item p {
+
+    margin:
+        0;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+
+    font-size:
+        15px;
+}
+
+/* =========================================================
+   FOUNDING TEAM - RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .belief-item {
+
+        flex:
+            1 1 40%;
+
+        max-width:
+            320px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .beliefs-list {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .belief-item {
+
+        width:
+            100%;
+
+        max-width:
+            360px;
+    }
+
+
+    .belief-image {
+
+        height:
+            300px;
+    }
+
+}
+
+/* =========================================================
+   CTA BUTTONS
+   ========================================================= */
+
+.cta-buttons {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    flex-wrap:
+        wrap;
+}
+
+
+.cta-button.secondary {
+
+    background:
+        transparent;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.5);
+}
+
+
+/* =========================================================
+   SERMONS / MESSAGES
+   ========================================================= */
+
+.sermon-video {
+
+    width:
+        100%;
+}
+
+
+.video-frame {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        430px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary-deep)
+        );
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.video-placeholder {
+
+    min-height:
+        430px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        40px;
+
+    text-align:
+        center;
+
+    color:
+        #ffffff;
+}
+
+
+.video-placeholder span {
+
+    margin-top:
+        20px;
+
+    color:
+        var(--accent-light);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+}
+
+
+.video-placeholder p {
+
+    max-width:
+        400px;
+
+    margin-top:
+        10px;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    line-height:
+        1.7;
+}
+
+
+.video-play-icon {
+
+    width:
+        78px;
+
+    height:
+        78px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding-left:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff;
+
+    font-size:
+        24px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+}
+
+
+
+
+.sermon-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+    margin-top:
+        50px;
+}
+
+
+.sermon-card {
+
+    overflow:
+        hidden;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    transition:
+        var(--transition);
+}
+
+
+.sermon-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.sermon-card-image {
+
+    position:
+        relative;
+
+    height:
+        220px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+}
+
+
+.sermon-play {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding-left:
+        3px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff;
+}
+
+
+.sermon-card-content {
+
+    padding:
+        28px;
+}
+
+
+.sermon-card-content > span {
+
+    color:
+        var(--primary);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.sermon-card-content h3 {
+
+    margin:
+        10px 0;
+
+    color:
+        var(--text);
+
+    font-size:
+        22px;
+}
+
+
+.sermon-card-content p {
+
+    margin-bottom:
+        20px;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+}
+
+
+.sermon-card-content a {
+
+    color:
+        var(--primary);
+
+    font-weight:
+        700;
+}
+
+
+.message-feature {
+
+    height:
+        100%;
+
+    min-height:
+        450px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--primary-dark),
+            var(--primary-deep)
+        );
+
+    color:
+        #ffffff;
+
+    text-align:
+        center;
+}
+
+
+.message-feature-icon {
+
+    width:
+        75px;
+
+    height:
+        75px;
+
+    margin-bottom:
+        25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--accent);
+
+    font-size:
+        30px;
+}
+
+
+.message-feature h3 {
+
+    margin:
+        0;
+
+    font-size:
+        42px;
+}
+
+
+.message-feature span {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--accent-light);
+
+    font-size:
+        28px;
+
+    font-weight:
+        700;
+}
+
+
+.message-feature strong {
+
+    font-size:
+        28px;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   GALLERY PAGE
+   ========================================================= */
+
+.gallery-intro {
+
+    padding:
+        100px 0 60px;
+
+    background:
+        var(--background);
+}
+
+
+.gallery-section {
+
+    padding:
+        40px 0 100px;
+
+    background:
+        var(--background);
+}
+
+
+.gallery-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-auto-rows:
+        280px;
+
+    gap:
+        20px;
+}
+
+
+.gallery-item {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--surface-alt);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.gallery-item.gallery-large {
+
+    grid-column:
+        span 2;
+
+    grid-row:
+        span 2;
+}
+
+
+.gallery-item.gallery-wide {
+
+    grid-column:
+        span 2;
+}
+
+
+.gallery-item img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform 0.5s ease;
+            border-radius: 12px;
+}
+
+
+.gallery-item:hover img {
+
+    transform:
+        scale(1.06);
+}
+
+
+.gallery-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        auto 0 0 0;
+
+    padding:
+        50px 25px 25px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(11, 18, 32, 0.95),
+            rgba(11, 18, 32, 0)
+        );
+
+    color:
+        #ffffff;
+            border-radius: 12px;
+}
+
+
+.gallery-overlay span {
+
+    color:
+        var(--accent-light);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.gallery-overlay h3 {
+
+    margin-top:
+        7px;
+
+    font-size:
+        22px;
+}
+
+
+/* =========================================================
+   FEATURED STORY
+   ========================================================= */
+
+.gallery-story {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--surface);
+}
+
+
+.gallery-story-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        70px;
+
+    align-items:
+        center;
+}
+
+
+.gallery-story-image img {
+
+    width:
+        100%;
+
+    height:
+        520px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.gallery-story-content h2 {
+
+    margin:
+        12px 0 25px;
+
+    font-size:
+        clamp(36px, 4vw, 54px);
+
+    line-height:
+        1.1;
+
+    color:
+        var(--text);
+}
+
+
+.gallery-story-content h2 span {
+
+    color:
+        var(--primary);
+}
+
+
+.gallery-story-content p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+}
+
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.gallery-values {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--surface-alt);
+}
+
+
+.values-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+
+    margin-top:
+        50px;
+}
+
+
+.value-card {
+
+    padding:
+        40px 30px;
+
+    text-align:
+        center;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    transition:
+        var(--transition);
+}
+
+
+.value-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.value-icon {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    margin:
+        0 auto 22px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--surface-alt);
+
+    color:
+        var(--primary);
+
+    font-size:
+        25px;
+}
+
+
+.value-card h3 {
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--text);
+
+    font-size:
+        22px;
+}
+
+
+.value-card p {
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   GALLERY MEDIA — FULL IMAGE VISIBILITY
+   ========================================================= */
+
+.gallery-media-section {
+    width: 100%;
+    padding: 90px 0;
+    background-color: #F4F7FA;
+}
+
+.gallery-media-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    background: transparent;
+}
+
+.media-section-heading-1 {
+    margin-bottom: 40px;
+    background: transparent;
+}
+
+/* Gallery layout */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 18px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Each image wrapper grows to fit its image */
+.image-gallery .gallery-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Show the complete original photograph */
+.image-gallery .gallery-image img {
+    display: block;
+    position: static;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    transform: none;
+    transition: transform 0.35s ease;
+}
+
+/* Subtle hover effect without clipping the photograph */
+.image-gallery .gallery-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Second gallery section, if used */
+.gallery-media-section-2 {
+    width: 100%;
+    padding: 90px 0;
+    background-color: #8D0F7B;
+}
+
+.gallery-media-section-2 .container,
+.gallery-media-section-2 .media-section-heading,
+.gallery-media-section-2 .image-gallery {
+    background: transparent;
+}
+
+/* Dark mode */
+[data-theme="dark"] .gallery-media-section,
+.dark-theme .gallery-media-section {
+    background-color: #000000;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .gallery-media-section,
+    .gallery-media-section-2 {
+        padding: 60px 0;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .gallery-media-section,
+    .gallery-media-section-2 {
+        padding: 40px 0;
+    }
+
+    .gallery-media-section .container,
+    .gallery-media-section-2 .container {
+        padding-inline: 16px;
+    }
+
+    .image-gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .image-gallery .gallery-image img {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — GALLERY PAGE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-item.gallery-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .gallery-story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-intro,
+    .gallery-section,
+    .gallery-story,
+    .gallery-values {
+        padding: 50px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: 260px;
+    }
+
+    .gallery-item.gallery-large,
+    .gallery-item.gallery-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .gallery-story-image img {
+        height: auto;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-thumbnail {
+        height: 220px;
+    }
+}
+
+
+
+/* =========================================================
+   VIDEO GALLERY
+   ========================================================= */
+
+.video-gallery {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        30px;
+}
+
+
+.gallery-video {
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    background:
+        var(--surface);
+
+    transition:
+        var(--transition);
+}
+
+
+.gallery-video:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+
+.video-thumbnail {
+
+    position:
+        relative;
+
+    height:
+        320px;
+
+    overflow:
+        hidden;
+}
+
+
+.video-thumbnail img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.gallery-video:hover
+.video-thumbnail img {
+
+    transform:
+        scale(1.05);
+}
+
+
+.video-play {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    width:
+        70px;
+
+    height:
+        70px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff;
+
+    font-size:
+        22px;
+
+    padding-left:
+        4px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.3);
+}
+
+
+.video-info {
+
+    padding:
+        25px;
+}
+
+
+.video-info h3 {
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--text);
+
+    font-size:
+        22px;
+}
+
+
+.video-info p {
+
+    margin:
+        0;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.6;
+}
+
+
+.gallery-more {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    margin-top:
+        40px;
+}
+
+
+.gallery-more .cta-button {
+
+    min-width:
+        190px;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   AGFC BRAND COLOR CONSISTENCY
+   ========================================================= */
+
+/*
+   LIGHT MODE:
+   Section labels keep their original blue/green-style color.
+
+   DARK MODE:
+   OUR FOCUS / WHAT GUIDES US remain bright yellow.
+*/
+
+.welcome-content .section-label,
+.ministries-preview .section-label {
+
+    color:
+        var(--agfc-yellow) !important;
+}
+
+
+.services-section .section-label,
+.beliefs-section .section-label {
+
+    color:
+        var(--primary) !important;
+}
+
+
+[data-theme="dark"] .welcome-content .section-label,
+[data-theme="dark"] .ministries-preview .section-label,
+[data-theme="dark"] .services-section .section-label,
+[data-theme="dark"] .beliefs-section .section-label,
+.dark-theme .welcome-content .section-label,
+.dark-theme .ministries-preview .section-label,
+.dark-theme .services-section .section-label,
+.dark-theme .beliefs-section .section-label {
+
+    color:
+        var(--agfc-yellow-dark) !important;
+}
+
+
+/* =========================================================
+   AGFC TEXT VISIBILITY ON MAGENTA SECTIONS
+   ========================================================= */
+
+/*
+   These sections use the magenta page background,
+   so their supporting text stays slightly white
+   in LIGHT MODE for proper visibility.
+*/
+
+.welcome-content p,
+.ministries-preview .section-heading p {
+
+    color:
+        var(--agfc-light-text) !important;
+}
+
+
+/* =========================================================
+   AGFC HEADINGS ON MAGENTA SECTIONS
+   ========================================================= */
+
+.ministries-preview .section-heading h2 {
+
+    color:
+        #ffffff !important;
+}
+
+
+.welcome-section .welcome-content h2 {
+
+    color:
+        #ffffff;
+}
+
+
+.welcome-section .welcome-content h2 span {
+
+    color:
+        #ffffff !important;
+}
+
+
+/* =========================================================
+   AGFC TEXT LINK
+   ========================================================= */
+
+.text-link {
+
+    color:
+        var(--agfc-yellow) !important;
+}
+
+
+.text-link:hover {
+
+    color:
+        var(--agfc-yellow) !important;
+}
+
+
+[data-theme="dark"] .text-link,
+[data-theme="dark"] .text-link:hover,
+.dark-theme .text-link,
+.dark-theme .text-link:hover {
+
+    color:
+        var(--agfc-yellow-dark) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .desktop-nav,
+    .nav-action {
+
+        display:
+            none;
+    }
+
+
+    .mobile-menu-btn {
+
+        display:
+            flex;
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .sermon-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .gallery-item.gallery-large {
+
+        grid-column:
+            span 2;
+
+        grid-row:
+            span 1;
+    }
+
+
+    .gallery-story-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+    }
+
+
+    .values-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .image-gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .video-gallery {
+
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .hero {
+
+        min-height:
+            580px;
+    }
+
+
+    .welcome-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            45px;
+    }
+
+
+    .welcome-image img {
+
+        height:
+            400px;
+    }
+
+
+    .service-cards,
+    .ministry-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+
+        padding-top:
+            82px;
+    }
+
+
+    .top-bar {
+
+        display:
+            none;
+    }
+
+
+    .navbar {
+
+        top:
+            0;
+    }
+
+
+    .page-hero {
+
+        padding:
+            120px 20px 80px;
+    }
+
+
+    .about-intro,
+    .mission-section,
+    .story-section,
+    .beliefs-section {
+
+        padding:
+            70px 0;
+    }
+
+
+    .about-intro-grid,
+    .story-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+    }
+
+
+    .about-intro-image img,
+    .story-image img {
+
+        height:
+            350px;
+    }
+
+
+    .mission-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .belief-item {
+
+        grid-template-columns:
+            55px 1fr;
+
+        gap:
+            15px;
+    }
+
+
+    .cta-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .cta-buttons .cta-button {
+
+        width:
+            100%;
+
+        max-width:
+            280px;
+
+        text-align:
+            center;
+    }
+
+
+    .video-frame,
+    .video-placeholder {
+
+        min-height:
+            350px;
+    }
+
+
+    .sermon-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .message-feature {
+
+        min-height:
+            350px;
+    }
+
+
+    .gallery-story-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            40px;
+    }
+
+
+    .footer-grid {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+        gap:
+            45px;
+    }
+
+
+    .footer-column {
+
+        width:
+            100%;
+
+        max-width:
+            320px;
+
+        text-align:
+            center;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+    }
+
+
+    .footer-column h3 {
+
+        text-align:
+            center;
+
+        margin-bottom:
+            18px;
+    }
+
+
+    .footer-column a,
+    .footer-column p {
+
+        text-align:
+            center;
+    }
+
+
+    .footer-column > a {
+
+        text-align:
+            center;
+    }
+
+
+    .service-item {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+
+        align-items:
+            center;
+    }
+
+
+    .service-item strong,
+    .service-item span {
+
+        text-align:
+            center;
+    }
+
+
+    .footer-about {
+
+        align-items:
+            center;
+
+        text-align:
+            center;
+    }
+
+
+    .footer-about p {
+
+        text-align:
+            center;
+    }
+
+
+    .social-links {
+
+        justify-content:
+            center;
+    }
+
+
+    .welcome-section,
+    .services-section,
+    .ministries-preview {
+
+        padding:
+            70px 0;
+    }
+
+
+    .welcome-image img {
+
+        height:
+            320px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .top-info span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .top-bar-inner {
+
+        justify-content:
+            center;
+    }
+
+
+    .top-contact {
+
+        display:
+            none;
+    }
+
+
+    .nav-inner {
+
+        min-height:
+            72px;
+    }
+
+
+    .logo-text strong {
+
+        font-size:
+            15px;
+    }
+
+
+    .footer-grid {
+
+        gap:
+            40px;
+
+        padding-top:
+            50px;
+
+        padding-bottom:
+            45px;
+    }
+
+
+    .footer-bottom-inner {
+
+        flex-direction:
+            column;
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+
+        padding:
+            18px 0;
+    }
+
+
+    .hero {
+
+        min-height:
+            550px;
+    }
+
+
+    .hero-content {
+
+        padding:
+            70px 0;
+    }
+
+
+    .hero p {
+
+        font-size:
+            16px;
+    }
+
+
+    .gallery-intro,
+    .gallery-section,
+    .gallery-story,
+    .gallery-values {
+
+        padding:
+            70px 0;
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns:
+            1fr;
+
+        grid-auto-rows:
+            300px;
+    }
+
+
+    .gallery-item.gallery-large,
+    .gallery-item.gallery-wide {
+
+        grid-column:
+            span 1;
+    }
+
+
+    .gallery-story-image img {
+
+        height:
+            350px;
+    }
+
+
+    .values-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gallery-media-section {
+
+        padding:
+            65px 0;
+    }
+
+
+    .image-gallery {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gallery-image {
+
+        height:
+            300px;
+    }
+
+
+    .video-thumbnail {
+
+        height:
+            240px;
+    }
+}
+
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-section {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--surface);
+}
+
+
+.contact-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap:
+        80px;
+
+    align-items:
+        start;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+
+    margin:
+        10px 0 18px;
+
+    color:
+        var(--text);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(34px, 4vw, 48px);
+
+    line-height:
+        1.15;
+}
+
+
+.contact-intro {
+
+    margin-bottom:
+        40px;
+
+    color:
+        var(--muted);
+
+    line-height:
+        1.8;
+}
+
+
+.contact-item {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        18px;
+
+    padding:
+        22px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+
+.contact-item:last-child {
+
+    border-bottom:
+        none;
+}
+
+
+.contact-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--surface-alt);
+
+    font-size:
+        20px;
+}
+
+
+.contact-item h3 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--text);
+
+    font-size:
+        17px;
+}
+
+
+.contact-item p {
+
+    margin:
+        0;
+
+    color:
+        var(--muted);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+.contact-form-wrapper {
+
+    padding:
+        45px;
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        12px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.contact-form-wrapper > p {
+
+    margin-bottom:
+        30px;
+
+    color:
+        var(--muted);
+}
+
+
+.contact-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        20px;
+}
+
+
+.form-group {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        7px;
+}
+
+
+.form-group label {
+
+    color:
+        var(--text);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width:
+        100%;
+
+    padding:
+        14px 16px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        7px;
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text);
+
+    font-family:
+        inherit;
+
+    font-size:
+        14px;
+
+    outline:
+        none;
+
+    transition:
+        var(--transition);
+}
+
+
+.form-group textarea {
+
+    resize:
+        vertical;
+
+    min-height:
+        150px;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color:
+        var(--muted);
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(15, 98, 254, 0.10);
+}
+
+
+.contact-submit {
+
+    width:
+        100%;
+
+    padding:
+        15px 25px;
+
+    border:
+        none;
+
+    border-radius:
+        7px;
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        var(--transition);
+}
+
+
+.contact-submit:hover {
+
+    background:
+        var(--accent);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   VISIT US
+   ========================================================= */
+
+.contact-visit {
+
+    padding:
+        100px 0;
+
+    background:
+        var(--background);
+
+    text-align:
+        center;
+}
+
+
+.contact-visit-content {
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto;
+}
+
+
+.contact-visit .section-label {
+
+    color:
+        var(--agfc-yellow) !important;
+}
+
+
+.contact-visit h2 {
+
+    margin:
+        10px 0 18px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(34px, 4vw, 50px);
+
+    line-height:
+        1.15;
+}
+
+
+.contact-visit p {
+
+    max-width:
+        650px;
+
+    margin:
+        0 auto 30px;
+
+    color:
+        rgba(255,255,255,0.82);
+
+    line-height:
+        1.8;
+}
+
+
+.contact-map-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        13px 25px;
+
+    border-radius:
+        6px;
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+
+    font-weight:
+        700;
+
+    transition:
+        var(--transition);
+}
+
+
+.contact-map-button:hover {
+
+    background:
+        var(--accent);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            50px;
+    }
+
+
+    .contact-form-wrapper {
+
+        padding:
+            35px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .contact-section,
+    .contact-visit {
+
+        padding:
+            70px 0;
+    }
+
+
+    .contact-form-wrapper {
+
+        padding:
+            25px 20px;
+    }
+
+
+    .contact-item {
+
+        gap:
+            14px;
+    }
+}
+
+/* =========================================================
+   TYPOGRAPHY UPDATE ONLY
+   IMPORTANT:
+   This block intentionally does NOT change the existing
+   website colors, backgrounds, gradients, borders or layout.
+========================================================= */
+
+/* ---------------------------------------------------------
+   FONT SYSTEM
+--------------------------------------------------------- */
+
+:root {
+    --font-heading: "Merriweather", Georgia, serif;
+    --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+
+/* ---------------------------------------------------------
+   GLOBAL BODY TYPOGRAPHY
+--------------------------------------------------------- */
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+
+/* ---------------------------------------------------------
+   HEADINGS
+--------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   HERO TYPOGRAPHY
+--------------------------------------------------------- */
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+.hero-small {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+
+/* ---------------------------------------------------------
+   PAGE HERO
+--------------------------------------------------------- */
+
+.page-hero h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+.page-hero p {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+.page-hero-label {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   NAVIGATION
+--------------------------------------------------------- */
+
+.desktop-nav a {
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.logo-text strong {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.logo-text span {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.theme-toggle {
+    font-family: var(--font-body);
+}
+
+.give-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+
+/* ---------------------------------------------------------
+   TOP BAR
+--------------------------------------------------------- */
+
+.top-bar {
+    font-family: var(--font-body);
+}
+
+.top-contact {
+    font-weight: 400;
+}
+
+.top-contact a {
+    font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION LABELS
+--------------------------------------------------------- */
+
+.section-label {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION HEADINGS
+--------------------------------------------------------- */
+
+.section-heading h2,
+.welcome-content h2,
+.about-intro-content h2,
+.story-content h2,
+.gallery-story-content h2,
+.contact-info h2,
+.contact-form-wrapper h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.section-heading p,
+.welcome-content p,
+.about-intro-content p,
+.story-content p,
+.gallery-story-content p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   SERVICE CARDS
+--------------------------------------------------------- */
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.service-card p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   MINISTRY CARDS
+--------------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------------
+   MISSION / VALUES / BELIEFS
+--------------------------------------------------------- */
+
+.mission-card h3,
+.value-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.mission-card p,
+.value-card p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.belief-item h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.belief-item p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   CTA SECTIONS
+--------------------------------------------------------- */
+
+.cta-content h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.cta-content p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTONS
+--------------------------------------------------------- */
+
+.hero-btn,
+.cta-button,
+.contact-submit,
+.contact-map-button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+
+/* ---------------------------------------------------------
+   SERMON / VIDEO SECTIONS
+--------------------------------------------------------- */
+
+.sermon-card-content h3,
+.message-feature h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.sermon-card-content p,
+.message-feature p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.sermon-card-content > span,
+.message-feature > span {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   GALLERY
+--------------------------------------------------------- */
+
+.gallery-overlay span {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.gallery-story-content h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   CONTACT PAGE
+--------------------------------------------------------- */
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.contact-info p,
+.contact-form-wrapper p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.contact-form label {
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+.contact-submit {
+    font-weight: 600;
+}
+
+
+
+/* =========================================
+   CONTACT SUCCESS POPUP MODAL
+========================================= */
+
+.contact-success-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(12, 18, 35, 0.68);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.contact-success-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.contact-success-modal {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    box-sizing: border-box;
+
+    padding: 36px 30px 30px;
+    border-radius: 20px;
+
+    background: #ffffff;
+    color: #172033;
+    text-align: center;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(18px) scale(0.97);
+    transition: transform 0.25s ease;
+}
+
+.contact-success-overlay.is-visible .contact-success-modal {
+    transform: translateY(0) scale(1);
+}
+
+.contact-success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+    background: #e7f7ee;
+    color: #16834a;
+
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.contact-success-modal h2 {
+    margin: 0 0 12px;
+    color: #172033;
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.contact-success-modal p {
+    margin: 0 0 26px;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+#contactSuccessOk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 125px;
+    min-height: 46px;
+    padding: 12px 28px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2457e6;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+#contactSuccessOk:hover {
+    background: #1744c4;
+    transform: translateY(-2px);
+}
+
+#contactSuccessOk:focus-visible {
+    outline: 3px solid #ff8b35;
+    outline-offset: 4px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .contact-success-modal {
+        max-width: 360px;
+        padding: 30px 22px 24px;
+        border-radius: 16px;
+    }
+
+    .contact-success-modal h2 {
+        font-size: 22px;
+    }
+
+    .contact-success-modal p {
+        font-size: 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .contact-success-overlay,
+    .contact-success-modal,
+    #contactSuccessOk {
+        transition: none;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+.site-footer {
+    font-family: var(--font-body);
+
+}
+
+.dark-theme .site-footer{
+background-color: #000000;
+}
+
+.footer-logo strong {
+    font-family: var(--font-heading);
+    font-weight: 700;
+        color: #A0008D !important;
+}
+
+.footer-logo span {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.footer-column h3 {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-column p {
+    font-family: var(--font-body);
+}
+
+.footer-bottom {
+    font-family: var(--font-body);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU
+--------------------------------------------------------- */
+
+.mobile-menu a {
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE TYPOGRAPHY
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        letter-spacing: -0.025em;
+    }
+
+    .page-hero h1 {
+        letter-spacing: -0.025em;
+    }
+
+    .section-heading h2,
+    .welcome-content h2,
+    .about-intro-content h2,
+    .story-content h2,
+    .gallery-story-content h2,
+    .contact-info h2,
+    .contact-form-wrapper h2 {
+        letter-spacing: -0.02em;
+    }
+}
+
+/* ---------------------------------------------------------
+   FOOTER SECTION HEADINGS
+--------------------------------------------------------- */
+
+/* Footer headings — same typography as header navigation */
+.site-footer h3,
+.site-footer .footer-title,
+.site-footer .footer-column-title,
+.footer-column h3 {
+    font-family: var(--font-body) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em;
+    text-transform: none;
+}
+
+
+/* =========================================================
+   APPLE-STYLE IMAGE REVEAL ON SCROLL
+========================================================= */
+
+.scroll-image {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Initial state */
+.scroll-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: scale(1.06);
+    clip-path: inset(12% 0 12% 0);
+
+    transition:
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        clip-path 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* When image enters viewport */
+.scroll-image.is-visible img {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+}
+
+/* =========================================================
+   RESPONSIVE VIDEO PLAYER SYSTEM
+   Keeps every video at the same visual dimensions
+   without changing the existing website colors.
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   VIDEO GRID
+--------------------------------------------------------- */
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   VIDEO CARD
+--------------------------------------------------------- */
+
+.gallery-video {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   VIDEO FRAME
+--------------------------------------------------------- */
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   ACTUAL VIDEO
+--------------------------------------------------------- */
+
+.video-thumbnail video {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /*
+       Every video occupies exactly the same frame.
+    */
+    object-fit: cover;
+    object-position: center;
+
+    /*
+       Prevents unexpected inline spacing.
+    */
+    vertical-align: middle;
+}
+
+
+/* ---------------------------------------------------------
+   VIDEO INFORMATION
+--------------------------------------------------------- */
+
+.video-info {
+    padding: 22px 0 10px;
+}
+
+.video-info h3 {
+    margin: 0 0 8px;
+}
+
+.video-info p {
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   REMOVE OLD IMAGE/PLAY-BUTTON BEHAVIOUR
+--------------------------------------------------------- */
+
+.video-thumbnail img {
+    display: none;
+}
+
+.video-play {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .video-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .video-gallery {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .video-thumbnail {
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+/* =========================================================
+   YOUTUBE-STYLE VIDEO CARDS
+========================================================= */
+
+.videos-section .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 28px;
+    width: 100%;
+    align-items: start;
+}
+
+.videos-section .gallery-video {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    overflow: hidden;
+}
+
+/* YouTube-style 16:9 video window */
+.videos-section .video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+/* Actual video */
+.videos-section .video-thumbnail video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Video information underneath */
+.videos-section .video-info {
+    padding: 16px 4px 0;
+    height: auto;
+}
+
+.videos-section .video-info h3 {
+    margin: 0 0 7px;
+    line-height: 1.3;
+}
+
+.videos-section .video-info p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .videos-section .video-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .videos-section .video-gallery {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .videos-section .video-thumbnail {
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+.section-label,
+.church-cta > .container .cta-content > span {
+    font-family: var(--font-body);
+}
+
+/* =========================================================
+   AGFC — GLOBAL TYPOGRAPHY CONSISTENCY
+   Matches the visual language established on index.html
+   ========================================================= */
+
+/* Body / paragraph text */
+body,
+p,
+li,
+a,
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+}
+
+/* Main page and section headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-body);
+}
+
+/* Section labels */
+.section-label,
+.page-hero-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+/* CTA label */
+.church-cta .cta-content > span {
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+/* Keep heading hierarchy clear */
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+/* About page cards */
+.mission-card h3,
+.belief-item h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.about-intro-content p {
+    color: #a8b2c1;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* =========================================================
+   ABOUT PAGE — MATCH HOMEPAGE VISUAL HIERARCHY
+   ========================================================= */
+
+/* Bright yellow section labels
+   Matches WELCOME TO AGFC / OUR FOCUS on index.html */
+.about-intro .section-label,
+.mission-section .section-label,
+.story-section .section-label,
+.beliefs-section .section-label {
+    color: var(--agfc-yellow);
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+/* Keep the same bright yellow treatment if the label
+   is displayed in another theme */
+[data-theme="dark"] .about-intro .section-label,
+[data-theme="dark"] .mission-section .section-label,
+[data-theme="dark"] .story-section .section-label,
+[data-theme="dark"] .beliefs-section .section-label,
+.dark-theme .about-intro .section-label,
+.dark-theme .mission-section .section-label,
+.dark-theme .story-section .section-label,
+.dark-theme .beliefs-section .section-label {
+    color: var(--agfc-yellow);
+}
+
+
+/* =========================================================
+   ABOUT PAGE PARAGRAPHS
+   Match the paragraph color used on index.html
+   ========================================================= */
+
+.about-intro-content p,
+.story-content p {
+    color: var(--muted);
+    font-family: var(--font-body);
+}
+
+
+/* =========================================================
+   WHAT WE DO — MAIN HEADING
+   "Caring For Our Community"
+   ========================================================= */
+
+.story-section .story-content h2 {
+    color: #ffffff;
+    font-family: var(--font-body);
+}
+
+.story-section .story-content h2 span {
+    color: #ffffff;
+}
+
+.about-intro-content h2,
+.about-intro-content h2 span {
+    color: #ffffff;
+}
+
+/* FIND US — fully white heading in both themes */
+.about-intro .section-heading h2,
+.about-intro .section-heading h2 span {
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   ABOUT PAGE — MATCH WELCOME SECTION PARAGRAPH COLOR
+   ========================================================= */
+
+.about-intro-content p,
+.story-content p {
+    color: inherit;
+}
+/* =========================================
+   GALLERY HEADING COLORS
+========================================= */
+
+/* PHOTO GALLERY - BOTH MODES */
+.gallery-photo-label {
+    color: #ffd400 !important;
+}
+
+/* IMAGES - BOTH MODES */
+.gallery-images-title {
+    color: #ffffff !important;
+}
+
+
+/* =========================================
+   VIDEO GALLERY
+========================================= */
+
+/* LIGHT MODE */
+.gallery-video-label {
+    color: #0f62fe !important;
+}
+
+/* DARK MODE */
+[data-theme="dark"] .gallery-video-label,
+.dark-theme .gallery-video-label {
+    color: #ffd400 !important;
+}
+
+
+/* =========================================
+   VIDEOS TITLE
+========================================= */
+
+/* LIGHT MODE */
+.gallery-videos-title {
+    color: #000000 !important;
+}
+
+/* DARK MODE */
+[data-theme="dark"] .gallery-videos-title,
+.dark-theme .gallery-videos-title {
+    color: #ffffff !important;
+}
+
+
+.story-section {
+    padding: 0;
+}
+
+.sermon-video {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.video-frame {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.video-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================================
+   SERMON CARDS
+   ========================================================= */
+
+.sermon-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sermon-card {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SERMON CARD MEDIA
+   ========================================================= */
+
+.sermon-card-image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SERMON THUMBNAIL
+   ========================================================= */
+
+.sermon-thumbnail {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SERMON VIDEO PLAYER
+   ========================================================= */
+
+.sermon-video-player {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   SERMON PLAY BUTTON
+   ========================================================= */
+
+.sermon-play {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   ACTIVE VIDEO
+   ========================================================= */
+
+.sermon-card-image.video-active .sermon-thumbnail {
+    display: none;
+}
+
+
+.sermon-card-image.video-active .sermon-play {
+    display: none;
+}
+
+
+.sermon-card-image.video-active .sermon-video-player {
+    display: block;
+}
+
+
+/* =========================================================
+   SERMON CARD CONTENT
+   ========================================================= */
+
+.sermon-card-content {
+    margin: 0;
+    padding: 25px;
+}
+
+.about-intro
+{
+margin-top: 5rem;
+
+
+}
+
+.beliefs-section
+{
+margin-top: 5rem;
+
+
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social-links img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social-links a:hover {
+    background: transparent;
+    transform: translateY(-2px);
+}
+
+.social-links a:hover img {
+    transform: scale(1.12);
+    opacity: 0.85;
+}
+
+
+
+
+
+/* =========================================================
+   CUSTOM SECTION COLOURS — LIGHT & DARK MODE
+   Add this block at the END of your existing stylesheet.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. LIGHT MODE COLOURS
+   --------------------------------------------------------- */
+
+:root {
+    /* Footer — matches the header's --surface background */
+    --footer-bg: var(--surface);
+    --footer-text: var(--text);
+    --footer-heading: var(--text);
+    --footer-link: var(--text);
+    --footer-link-hover: var(--accent);
+    --footer-border: var(--border);
+
+    /* Welcome section */
+    --welcome-bg: #8D0F7B;
+    --welcome-heading: #FFFFFF;
+    --welcome-text: rgba(255, 255, 255, 0.88);
+    --welcome-label: #FACC15;
+    --welcome-link: #FACC15;
+
+    /* Ministries preview section */
+    --ministries-bg: #8D0F7B;
+    --ministries-heading: #FFFFFF;
+    --ministries-text: rgba(255, 255, 255, 0.88);
+    --ministries-label: #FACC15;
+
+    /* Ministry cards */
+    --ministry-card-bg: #E5D9E8;
+    --ministry-card-border: #E4E7EC;
+    --ministry-card-heading: #101828;
+    --ministry-card-text: #667085;
+    --ministry-card-label: #F97316;
+    --ministry-card-link: #0F62FE;
+    --ministry-card-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    /* Ministry category label typography */
+    --ministry-label-font: Georgia, serif;
+    --ministry-label-size: 10px;
+    --ministry-label-weight: 700;
+    --ministry-label-style: normal;
+    --ministry-label-spacing: 2px;
+    --ministry-label-transform: uppercase;
+}
+
+
+/* ---------------------------------------------------------
+   2. DARK MODE COLOURS
+   Supports both theme conventions in your stylesheet:
+   data-theme="dark" and .dark-theme
+   --------------------------------------------------------- */
+
+[data-theme="dark"],
+.dark-theme {
+    /* Footer — matches the header's --surface background */
+    --footer-bg: var(--surface);
+    --footer-text: #F1F5F9;
+    --footer-heading: #FFFFFF;
+    --footer-link: #E2E8F0;
+    --footer-link-hover: #FFAD70;
+    --footer-border: #202B3B;
+
+    /* Welcome section */
+    --welcome-bg:#8D0F7B;
+    --welcome-heading: #FFFFFF;
+    --welcome-text: #E5D9E8;
+    --welcome-label: #FDE047;
+    --welcome-link: #FDE047;
+
+    /* Ministries preview section */
+    --ministries-bg: black;
+    --ministries-heading: #FFFFFF;
+    --ministries-text: #E5D9E8;
+    --ministries-label: #FDE047;
+
+    /* Ministry cards */
+    --ministry-card-bg:  #2a2d2f;
+    --ministry-card-border: #2a2d2f;
+    --ministry-card-heading: #F8FAFC;
+    --ministry-card-text: #CBD5E1;
+    --ministry-card-label: #FFAD70;
+    --ministry-card-link: #93B4FF;
+    --ministry-card-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* ---------------------------------------------------------
+   4. WELCOME SECTION
+   --------------------------------------------------------- */
+
+.welcome-section {
+    background: var(--welcome-bg);
+}
+
+.welcome-section .welcome-content h2,
+.welcome-section .welcome-content h2 span {
+    color: var(--welcome-heading) !important;
+}
+
+.welcome-section .welcome-content p {
+    color: var(--welcome-text) !important;
+}
+
+.welcome-section .section-label {
+    color: var(--welcome-label) !important;
+}
+
+.welcome-section .text-link,
+.welcome-section .text-link:hover {
+    color: var(--welcome-link) !important;
+}
+
+
+/* ---------------------------------------------------------
+   5. WELCOME GRID
+   .welcome-grid is the existing grid class.
+   --------------------------------------------------------- */
+
+.welcome-grid {
+    background: transparent;
+}
+
+.container.welcome-grid,
+.container .welcome-grid {
+    color: var(--welcome-text);
+}
+
+.welcome-grid .welcome-content h2,
+.welcome-grid .welcome-content h2 span {
+    color: var(--welcome-heading) !important;
+}
+
+.welcome-grid .welcome-content p {
+    color: var(--welcome-text) !important;
+}
+
+
+/* ---------------------------------------------------------
+   6. MINISTRIES PREVIEW SECTION
+   --------------------------------------------------------- */
+
+.ministries-preview {
+background-color: #F4F7FA;
+}
+
+[data-theme="dark"] .ministries-preview,
+.dark-theme .ministries-preview {
+    background-color:#000000;
+}
+
+.ministries-preview .section-heading h2 {
+    color: var(--ministries-heading) !important;
+}
+
+.ministries-preview .section-heading p {
+    color: var(--ministries-text) !important;
+}
+
+.ministries-preview .section-label {
+    color: var(--ministries-label) !important;
+}
+
+
+/* ---------------------------------------------------------
+   7. MINISTRY CARDS
+   --------------------------------------------------------- */
+
+.ministry-card {
+    background: var(--ministry-card-bg) !important;
+    border-color: var(--ministry-card-border) !important;
+    box-shadow: var(--ministry-card-shadow);
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.ministry-card:hover {
+    box-shadow: var(--ministry-card-shadow);
+}
+
+.ministry-content h3,
+.ministry-card .ministry-content h3 {
+    color: var(--ministry-card-heading) !important;
+}
+
+.ministry-content p {
+    color: var(--ministry-card-text) !important;
+}
+
+.ministry-content a {
+    color: var(--ministry-card-link) !important;
+}
+
+
+.ministry-content a:hover {
+    color: var(--ministry-card-label) !important;
+}
+
+
+/* ---------------------------------------------------------
+   8. MINISTRY CATEGORY LABEL
+   Controls colour, font style and typography independently.
+   --------------------------------------------------------- */
+
+.ministry-content > span {
+ color:  #8D0F7B !important;
+    font-family: var(--ministry-label-font) !important;
+    font-size: var(--ministry-label-size) !important;
+    font-weight: var(--ministry-label-weight) !important;
+    font-style: var(--ministry-label-style) !important;
+    letter-spacing: var(--ministry-label-spacing) !important;
+    text-transform: var(--ministry-label-transform);
+}
+
+/* DARK MODE */
+[data-theme="dark"] .ministry-content > span {
+    color: #FFD700 !important;
+}
+
+.ministry-content a {
+    color: #007BFF !important;
+}
+
+.ministry-content a:hover {
+    color: #0056B3 !important;
+}
+
+/* ---------------------------------------------------------
+   9. SMOOTH THEME TRANSITIONS
+   --------------------------------------------------------- */
+
+.site-footer,
+.welcome-section,
+.ministries-preview,
+.ministry-card {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+/* =========================================
+   GALLERY SECTIONS — LIGHT MODE
+========================================= */
+
+.gallery-media-section {
+    padding: 90px 0;
+    background-color: #F4F7FA;
+}
+
+.gallery-media-section .container {
+    background-color: transparent;
+}
+
+.media-section-heading-1 {
+    background-color: transparent;
+}
+
+.gallery-media-section .image-gallery {
+    background-color: transparent;
+}
+
+
+/* =========================================
+   VIDEO GALLERY — LIGHT MODE
+========================================= */
+
+.gallery-media-section-2 {
+    padding: 90px 0;
+       background-color: #8D0F7B;
+}
+
+.gallery-media-section-2 .container {
+    background-color: transparent;
+}
+
+.gallery-media-section-2 .media-section-heading {
+    background-color: transparent;
+}
+
+.gallery-media-section-2 .image-gallery {
+    background-color: transparent;
+}
+
+
+/* =========================================
+   GALLERY SECTIONS — DARK MODE
+========================================= */
+
+[data-theme="dark"] .gallery-media-section,
+.dark-theme .gallery-media-section {
+    background-color:#000000;
+}
+
+[data-theme="dark"] .gallery-media-section .container,
+.dark-theme .gallery-media-section .container {
+    background-color: transparent;
+}
+
+[data-theme="dark"] .media-section-heading-1,
+.dark-theme .media-section-heading-1 {
+    background-color: transparent;
+}
+
+[data-theme="dark"] .gallery-media-section .image-gallery,
+.dark-theme .gallery-media-section .image-gallery {
+    background-color: transparent;
+}
+
+
+/* =========================================
+   VIDEO GALLERY — DARK MODE
+========================================= */
+
+[data-theme="dark"] .gallery-media-section-2,
+.dark-theme .gallery-media-section-2 {
+    background-color: #8D0F7B;
+}
+
+[data-theme="dark"] .gallery-media-section-2 .container,
+.dark-theme .gallery-media-section-2 .container {
+    background-color: transparent;
+}
+
+[data-theme="dark"] .gallery-media-section-2 .media-section-heading,
+.dark-theme .gallery-media-section-2 .media-section-heading {
+    background-color: transparent;
+}
+
+[data-theme="dark"] .gallery-media-section-2 .image-gallery,
+.dark-theme .gallery-media-section-2 .image-gallery {
+    background-color: transparent;
+}
+
+
+
+/* ABOUT INTRO — FULL VIEWPORT WIDTH */
+.about-intro {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 90px 0;
+    box-sizing: border-box;
+}
+
+/* EXPAND THE INNER CONTAINER */
+.about-intro > .container.about-intro-grid {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 5%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+}
+
+/* ALLOW CONTENT TO USE ITS FULL GRID COLUMN */
+.about-intro-content {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+/* MAKE THE IMAGE COLUMN EXPAND TOO */
+.about-intro .story-image,
+.about-intro .about-intro-image {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.about-intro .story-image img,
+.about-intro .about-intro-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .about-intro {
+        padding: 60px 0;
+    }
+
+    .about-intro > .container.about-intro-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        padding: 0 5%;
+    }
+}
+
+
+
+/* =========================================
+   1. GENERAL SECTION LABEL
+   ========================================= */
+
+/* Light mode */
+.section-heading .section-label {
+    color: blue !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .section-heading .section-label,
+body[data-theme="dark"] .section-heading .section-label,
+html.dark-theme .section-heading .section-label,
+body.dark-theme .section-heading .section-label {
+    color: #FB923C !important;
+}
+
+
+/* =========================================
+   2. GENERAL SECTION HEADING — H2
+   ========================================= */
+
+/* Light mode */
+.section-heading h2 {
+    color: #000000 !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .section-heading h2,
+body[data-theme="dark"] .section-heading h2,
+html.dark-theme .section-heading h2,
+body.dark-theme .section-heading h2 {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================
+   3. GENERAL SECTION DESCRIPTION
+   ========================================= */
+
+/* Light mode */
+.section-heading p {
+    color: #000000 !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .section-heading p,
+body[data-theme="dark"] .section-heading p,
+html.dark-theme .section-heading p,
+body.dark-theme .section-heading p {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================
+   4. LOGO NAME
+   ========================================= */
+
+.logo-text strong {
+    color: #8D0F7B !important;
+    font-style: normal;
+}
+
+
+/* =========================================
+   5. LOGO TAGLINE
+   ========================================= */
+
+/* Light mode */
+.logo-text span {
+    color: blue !important;
+    font-style: normal;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .logo-text span,
+body[data-theme="dark"] .logo-text span,
+html.dark-theme .logo-text span,
+body.dark-theme .logo-text span {
+    color: #FB923C !important;
+}
+
+
+/* =========================================
+   6. CONTACT FORM SECTION LABEL
+   ========================================= */
+
+/* Light mode */
+.contact-form-wrapper .section-label {
+    color: #FB923C !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .contact-form-wrapper .section-label,
+body[data-theme="dark"] .contact-form-wrapper .section-label,
+html.dark-theme .contact-form-wrapper .section-label,
+body.dark-theme .contact-form-wrapper .section-label {
+    color: #FB923C !important;
+}
+
+
+/* =========================================
+   7. MINISTRIES SECTION — H2
+   ========================================= */
+
+/* Light mode */
+.ministries-preview .section-heading h2 {
+    color: #000000 !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .ministries-preview .section-heading h2,
+body[data-theme="dark"] .ministries-preview .section-heading h2,
+html.dark-theme .ministries-preview .section-heading h2,
+body.dark-theme .ministries-preview .section-heading h2 {
+    color: #FFFFFF !important;
+}
+
+
+/* =========================================
+   8. MINISTRIES SECTION — PARAGRAPH
+   ========================================= */
+
+/* Light mode */
+.ministries-preview .section-heading p {
+    color: #000000 !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .ministries-preview .section-heading p,
+body[data-theme="dark"] .ministries-preview .section-heading p,
+html.dark-theme .ministries-preview .section-heading p,
+body.dark-theme .ministries-preview .section-heading p {
+    color: #FFFFFF !important;
+}
+
+
+
+/* =========================================
+   PHOTO GALLERY LABEL
+   ========================================= */
+
+/* Light mode: Blue */
+.media-section-heading-1 .section-label.gallery-photo-label {
+    color: blue !important;
+}
+
+/* Dark mode: Orange */
+html[data-theme="dark"] .media-section-heading-1 .section-label.gallery-photo-label,
+body[data-theme="dark"] .media-section-heading-1 .section-label.gallery-photo-label,
+html.dark-theme .media-section-heading-1 .section-label.gallery-photo-label,
+body.dark-theme .media-section-heading-1 .section-label.gallery-photo-label {
+    color: #FB923C !important;
+}
+
+
+/* =========================================
+   VIDEO GALLERY LABEL
+   ========================================= */
+
+/* Light and dark modes: Orange */
+.media-section-heading .section-label.gallery-photo-label,
+html[data-theme="dark"] .media-section-heading .section-label.gallery-photo-label,
+body[data-theme="dark"] .media-section-heading .section-label.gallery-photo-label,
+html.dark-theme .media-section-heading .section-label.gallery-photo-label,
+body.dark-theme .media-section-heading .section-label.gallery-photo-label {
+    color: #FB923C !important;
+}
+
+
+
+.objectives-list li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 24px; /* Vertical spacing between objectives */
+    line-height: 1.8;
+
+}
+
+
+
+/* =====================================
+   IMAGE LIGHTBOX MODAL
+===================================== */
+
+.image-gallery .gallery-image img {
+    cursor: zoom-in;
+}
+
+/* Modal background */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px;
+    background: rgba(0, 0, 0, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.image-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Image and caption container */
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 12px;
+}
+
+.lightbox-content img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 150px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-caption {
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+
+.lightbox-counter {
+    color: #d1d5db;
+    font-size: 13px;
+}
+
+/* Close button */
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    z-index: 2;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+    background: #dc2626;
+    transform: rotate(90deg);
+}
+
+/* Previous and next buttons */
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 58px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.2s ease;
+}
+
+.lightbox-arrow:hover {
+    background: #2563eb;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+/* Keep page from scrolling behind the modal */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .image-lightbox {
+        padding: 60px 12px;
+    }
+
+    .lightbox-content img {
+        max-width: 100%;
+        max-height: calc(100vh - 170px);
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .lightbox-arrow {
+        top: auto;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        transform: none;
+    }
+
+    .lightbox-prev {
+        left: calc(50% - 54px);
+    }
+
+    .lightbox-next {
+        right: calc(50% - 54px);
+    }
+
+    .lightbox-caption {
+        margin-bottom: 48px;
+    }
+
+    .lightbox-counter {
+        margin-bottom: 42px;
+    }
+}
+
+
+/* About intro paragraph — white in both themes */
+.about-intro-content .site-paragraph {
+    color: #FFFFFF !important;
+}
+
+
+
+/* Mission Statement — white in both themes */
+.story-content .site-paragraph {
+    color: #FFFFFF !important;
+}
+
+
+
+/* Founder name — white in both themes */
+.story-content h3 {
+    color: yellow !important;
+}
+
+
+/* Source of Revenue heading — white in both themes */
+.about-intro .story-content h2 {
+    color: #FFFFFF !important;
+}
+
+
+
+/* Faith, Hope & Love — heading and paragraphs white */
+h2:has(+ .site-paragraph),
+h2:has(+ p.site-paragraph) {
+    color: #FFFFFF !important;
+}
+
+.site-paragraph {
+    color: #FFFFFF !important;
+}
+
+
+
+
+/* ABOUT INTRO — H2 SPAN: ORANGE IN BOTH THEMES */
+html body .about-intro .about-intro-content h2 span {
+    color: #FB923C !important;
+}
+
+/* Support dark mode */
+html[data-theme="dark"] body .about-intro .about-intro-content h2 span,
+html.dark-theme body .about-intro .about-intro-content h2 span,
+body.dark-theme .about-intro .about-intro-content h2 span {
+    color: #FB923C !important;
+}
+
+
+
+/* ABOUT INTRO — PARAGRAPHS WHITE IN BOTH THEMES */
+.about-intro-content p {
+    color: #FFFFFF !important;
+}
+
+
+/* SERMON CARD — SPAN COLORS */
+
+
+/* Light mode: Blue */
+.sermon-card-content span,
+.sermon-card-content span {
+    font-style: normal;
+}
+
+/* Light mode: Blue */
+html:not([data-theme="dark"]) .sermon-card-content span,
+body:not(.dark-theme) .sermon-card-content span {
+    color: blue !important;
+}
+
+/* Dark mode: Yellow */
+html[data-theme="dark"] .sermon-card-content span,
+html.dark-theme .sermon-card-content span,
+body.dark-theme .sermon-card-content span {
+    color: #FFFF00 !important;
+}
+
+
+/* SERMON CARD — VIEW MESSAGE LINK */
+
+/* Light mode: Blue */
+html:not([data-theme="dark"]) .sermon-card-content a {
+    color: #2563EB !important;
+}
+
+/* Dark mode: Orange */
+html[data-theme="dark"] .sermon-card-content a,
+html.dark-theme .sermon-card-content a,
+body.dark-theme .sermon-card-content a {
+    color: #FB923C !important;
+}
+
+
+/* STORY SECTION — PARAGRAPHS WHITE IN BOTH THEMES */
+.story-content p {
+    color: #FFFFFF !important;
+}
+
+
+
+
+/* =========================================
+   AGFC CONTACT SUCCESS MODAL
+   Light and Dark Theme Support
+========================================= */
+
+/* LIGHT MODE — Default */
+.contact-success-overlay {
+    --modal-bg: #ffffff;
+    --modal-text: #172033;
+    --modal-muted: #667085;
+    --modal-border: #e5e7eb;
+    --modal-icon-bg: #e7f7ee;
+    --modal-icon-color: #16834a;
+    --modal-button-bg: var(--primary, #0f62fe);
+    --modal-button-hover: #084dbb;
+    --modal-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+
+    background: rgba(12, 18, 35, 0.65);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.contact-success-modal {
+    background: var(--modal-bg);
+    color: var(--modal-text);
+    border: 1px solid var(--modal-border);
+    box-shadow: var(--modal-shadow);
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-success-modal h2 {
+    color: var(--modal-text);
+}
+
+.contact-success-modal p {
+    color: var(--modal-muted);
+}
+
+.contact-success-icon {
+    background: var(--modal-icon-bg);
+    color: var(--modal-icon-color);
+}
+
+#contactSuccessOk {
+    background: var(--modal-button-bg);
+    color: #ffffff;
+}
+
+#contactSuccessOk:hover {
+    background: var(--modal-button-hover);
+}
+
+/* =========================================
+   DARK MODE
+   Support both theme systems used by AGFC
+========================================= */
+
+[data-theme="dark"] .contact-success-overlay,
+.dark-theme .contact-success-overlay {
+    --modal-bg: #171923;
+    --modal-text: #f5f6fa;
+    --modal-muted: #c2c7d0;
+    --modal-border: #343847;
+    --modal-icon-bg: #173b2b;
+    --modal-icon-color: #7ce0a6;
+    --modal-button-bg: var(--primary, #0f62fe);
+    --modal-button-hover: #3b82f6;
+    --modal-shadow: 0 25px 80px rgba(0, 0, 0, 0.55);
+
+    background: rgba(0, 0, 0, 0.78);
+}
+
+[data-theme="dark"] .contact-success-modal,
+.dark-theme .contact-success-modal {
+    background: var(--modal-bg);
+    color: var(--modal-text);
+    border-color: var(--modal-border);
+}
+
+[data-theme="dark"] .contact-success-modal h2,
+.dark-theme .contact-success-modal h2 {
+    color: var(--modal-text);
+}
+
+[data-theme="dark"] .contact-success-modal p,
+.dark-theme .contact-success-modal p {
+    color: var(--modal-muted);
+}
+
+[data-theme="dark"] .contact-success-icon,
+.dark-theme .contact-success-icon {
+    background: var(--modal-icon-bg);
+    color: var(--modal-icon-color);
+}
+
+[data-theme="dark"] #contactSuccessOk,
+.dark-theme #contactSuccessOk {
+    background: var(--modal-button-bg);
+    color: #ffffff;
+}
+
+[data-theme="dark"] #contactSuccessOk:hover,
+.dark-theme #contactSuccessOk:hover {
+    background: var(--modal-button-hover);
+}
+
+/* Keep keyboard focus clearly visible in either theme */
+#contactSuccessOk:focus-visible {
+    outline: 3px solid var(--agfc-yellow, #ffb52e);
+    outline-offset: 4px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .contact-success-modal {
+        transition: none;
+    }
+
+    #contactSuccessOk {
+        transition: none;
+    }
+}
+
+/* Both contact labels — same color in light and dark mode */
+.contact-info .section-label,
+.contact-form-wrapper .section-label {
+    color: blue !important;
+}
+
+/* Dark mode */
+html[data-theme="dark"] .contact-info .section-label,
+body[data-theme="dark"] .contact-info .section-label,
+html.dark-theme .contact-info .section-label,
+body.dark-theme .contact-info .section-label {
+    color: #FB923C !important;
+}
+
+/* Reduce the space above the founder's story on mobile */
+@media (max-width: 768px) {
+    .story-content {
+        padding-top: 0 !important;
+    }
+
+    .story-content .section-label {
+        margin-top: 0 !important;
+    }
+}
+
+
+
+/* =========================================================
+   AGFC SERMONS PAGE — RESPONSIVE WIDTH CORRECTION
+   ========================================================= */
+
+/* Predictable sizing across the entire page */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent accidental horizontal overflow */
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: clip;
+}
+
+/* Keep major page sections within the viewport */
+main,
+main section,
+.story-section,
+.services-section,
+.about-intro {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Consistent container sizing */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(16px, 4vw, 32px);
+    padding-right: clamp(16px, 4vw, 32px);
+}
+
+/* =========================================================
+   FEATURED SERMON — VIDEO AND BACKGROUND
+   ========================================================= */
+
+.story-grid,
+.about-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(20px, 4vw, 48px);
+    width: 100%;
+    min-width: 0;
+}
+
+.sermon-video,
+.video-frame,
+.video-placeholder,
+.sermon-content,
+.about-intro-content,
+.story-image {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Maintain the featured video background's exact width */
+.video-frame {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    background-color: #171717;
+}
+
+.video-placeholder {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #171717;
+}
+
+.video-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Keep the play icon and label inside the video frame */
+.video-play-icon,
+.video-placeholder > span {
+    position: absolute;
+    z-index: 1;
+}
+
+/* =========================================================
+   SERMON CARD GRID
+   ========================================================= */
+
+.sermon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 28px);
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+}
+
+.sermon-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+/* Thumbnail wrapper and its background */
+.sermon-card-image {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #171717;
+}
+
+/* Thumbnail and video occupy precisely the same frame */
+.sermon-card-image .sermon-thumbnail,
+.sermon-card-image .sermon-video-player {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    border: 0;
+}
+
+/* Preserve video playback controls */
+.sermon-card-image .sermon-video-player {
+    z-index: 2;
+}
+
+/* Keep the play button inside the thumbnail */
+.sermon-card-image .sermon-play {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 24px);
+}
+
+/* Text must never force a card wider than its column */
+.sermon-card-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    flex: 1;
+}
+
+.sermon-card-content h3,
+.sermon-card-content p,
+.sermon-card-content a {
+    max-width: 100%;
+}
+
+/* Prevent images from exceeding their containers */
+.story-image img,
+.about-intro img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .sermon-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .story-grid,
+    .about-intro-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sermon-video {
+        width: 100%;
+    }
+
+    .sermon-content {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* One column: each card uses the full available width */
+    .sermon-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .sermon-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    /* Lock the image and background to the card width */
+    .sermon-card-image {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+    }
+
+    .sermon-card-image .sermon-thumbnail,
+    .sermon-card-image .sermon-video-player {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .sermon-card-content {
+        width: 100%;
+        min-width: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Featured video stays aligned with the sermon cards */
+    .story-grid,
+    .about-intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sermon-video,
+    .video-frame,
+    .video-placeholder {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .video-frame {
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+    }
+
+    .video-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Stop long words or links from expanding the layout */
+    .sermon-card-content h3,
+    .sermon-card-content p,
+    .sermon-card-content a,
+    .sermon-content h2,
+    .sermon-content p {
+        overflow-wrap: anywhere;
+    }
+
+    /* Keep section headings within the viewport */
+    .section-heading,
+    .section-heading h2,
+    .section-heading p {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .sermon-grid {
+        gap: 18px;
+    }
+
+    .sermon-card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .video-frame,
+    .sermon-card-image {
+        border-radius: 10px;
+    }
+}
+
+
+/* Restore sermon thumbnails */
+.sermon-card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #171717;
+}
+
+.sermon-card-image img.sermon-thumbnail {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Keep the video hidden until playback is requested */
+.sermon-card-image video.sermon-video-player {
+    display: none;
+}
+
+/* Show the player only when explicitly activated */
+.sermon-card-image.is-playing video.sermon-video-player {
+    display: block;
+    z-index: 4;
+}
+
+.sermon-card-image.is-playing img.sermon-thumbnail,
+.sermon-card-image.is-playing .sermon-play {
+    display: none;
+}
+
+
+
+/* =====================================================
+   AGFC FOOTER — UNIFIED LAYOUT
+===================================================== */
+
+.site-footer {
+    width: 100%;
+    margin: 0;
+    background: var(--footer-bg, var(--surface, #ffffff));
+    color: var(--footer-text, var(--text, #252525));
+    border-top: 1px solid var(--footer-border, #e5e7eb);
+    box-sizing: border-box;
+}
+
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: min(92%, var(--container, 1400px));
+    max-width: var(--container, 1400px);
+    margin-inline: auto;
+    padding-top: 36px;
+    padding-bottom: 32px;
+}
+
+/* =====================================================
+   ROW 1 — LOGO LEFT, SOCIAL ICONS RIGHT
+===================================================== */
+
+.footer-brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 28px;
+}/* =====================================================
+   FOOTER LOGO — CLEAN IMAGE, NO CIRCLE
+===================================================== */
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.footer-logo-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+
+    /* Remove container styling */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    /* Prevent clipping */
+    overflow: visible;
+}
+
+.footer-logo-symbol img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    /* Remove image styling */
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+}
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-logo strong {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #A0008D;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.footer-logo span {
+    display: block;
+    margin: 0;
+    color: #1D4ED8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+}
+
+/* Social icons */
+
+.site-footer .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.site-footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--footer-border, #e5e7eb);
+    border-radius: 50%;
+    background: transparent;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.site-footer .social-links a:hover {
+    background: rgba(160, 0, 141, 0.1);
+    border-color: #A0008D;
+    transform: translateY(-3px);
+}
+
+.site-footer .social-links img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: var(--footer-icon-filter, none);
+}
+
+/* =====================================================
+   ROW 2 — HORIZONTAL NAVIGATION
+===================================================== */
+
+.footer-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+    padding: 22px 0;
+    border-top: 1px solid var(--footer-border, #e5e7eb);
+    border-bottom: 1px solid var(--footer-border, #e5e7eb);
+}
+
+.footer-navigation a {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 0;
+    color: var(--footer-link, var(--text, #252525));
+    font-family: var(--font-body, Arial, sans-serif);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.footer-navigation a:hover {
+    color: var(--footer-link-hover, #A0008D);
+}
+
+/* =====================================================
+   ROW 3 — CONTACT US
+   Heading above; contact details in a horizontal row
+===================================================== */
+
+/* CONTACT HEADING AND DETAILS ON THE SAME ROW */
+
+.footer-contact-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    padding-top: 26px;
+}
+
+.footer-contact-section h3 {
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-contact-items {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    min-width: 0;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0;
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* MOBILE: KEEP THE HEADING AND CONTACT DETAILS READABLE */
+
+@media (max-width: 600px) {
+    .footer-contact-section {
+        flex-direction: column;
+        gap: 14px;
+        padding-top: 22px;
+    }
+
+    .footer-contact-items {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+}
+/* =====================================================
+   ROW 4 — COPYRIGHT
+===================================================== */
+
+.site-footer .footer-bottom {
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid var(--footer-border, #e5e7eb);
+}
+
+.footer-bottom-inner {
+    width: min(92%, var(--container, 1400px));
+    max-width: var(--container, 1400px);
+    margin-inline: auto;
+    padding: 18px 0;
+}
+
+.footer-bottom-inner p {
+    margin: 0;
+    color: var(--footer-text, var(--text, #252525));
+    font-family: var(--font-body, Arial, sans-serif);
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+html[data-theme="dark"] .site-footer,
+body[data-theme="dark"] .site-footer,
+html.dark-theme .site-footer,
+body.dark-theme .site-footer {
+    --footer-bg: #000000;
+    --footer-text: #E5E7EB;
+    --footer-heading: #FFFFFF;
+    --footer-link: #E5E7EB;
+    --footer-link-hover: #FB923C;
+    --footer-border: #292929;
+    --footer-icon-filter: invert(1);
+
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+html[data-theme="dark"] .footer-logo strong,
+body[data-theme="dark"] .footer-logo strong,
+html.dark-theme .footer-logo strong,
+body.dark-theme .footer-logo strong {
+    color: #A0008D;
+}
+
+html[data-theme="dark"] .footer-logo span,
+body[data-theme="dark"] .footer-logo span,
+html.dark-theme .footer-logo span,
+body.dark-theme .footer-logo span {
+    color: #FB923C;
+}
+
+/* =====================================================
+   TABLETS
+===================================================== */
+
+@media (max-width: 900px) {
+    .footer-navigation {
+        gap: 12px 24px;
+    }
+
+    .footer-contact-items {
+        gap: 16px 24px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+   Logo stays left; social icons stay beside it on right
+===================================================== */
+
+@media (max-width: 600px) {
+    .footer-container {
+        width: 90%;
+        padding-top: 26px;
+        padding-bottom: 25px;
+    }
+
+    .footer-brand-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 22px;
+    }
+
+    .footer-logo {
+        gap: 9px;
+        flex: 1 1 auto;
+    }
+
+    .footer-logo-symbol {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+        
+    }
+
+    .footer-logo strong {
+        font-size: 15px;
+    }
+
+    .footer-logo span {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .site-footer .social-links {
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 0 0 auto;
+        gap: 7px;
+    }
+
+    .site-footer .social-links a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .site-footer .social-links img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .footer-navigation {
+        justify-content: flex-start;
+        gap: 10px 20px;
+        padding: 18px 0;
+    }
+
+    .footer-navigation a {
+        font-size: 12px;
+    }
+
+    .footer-contact-section {
+        padding-top: 22px;
+    }
+
+    .footer-contact-section h3 {
+        margin-bottom: 14px;
+    }
+
+    .footer-contact-items {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .footer-contact-item {
+        font-size: 12px;
+    }
+
+    .footer-bottom-inner {
+        width: 90%;
+        padding: 16px 0;
+    }
+
+    .footer-bottom-inner p {
+        font-size: 11px;
+    }
+}
+
+/* Extra-small phones */
+
+@media (max-width: 360px) {
+    .footer-brand-row {
+        gap: 7px;
+    }
+
+    .footer-logo {
+        gap: 6px;
+    }
+
+    .footer-logo-symbol {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+        background-color: transparent;
+    }
+
+    .footer-logo strong {
+        font-size: 13px;
+    }
+
+    .footer-logo span {
+        font-size: 8px;
+    }
+
+    .site-footer .social-links {
+        gap: 5px;
+    }
+
+    .site-footer .social-links a {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+
+/* REMOVE DIVIDER LINES BETWEEN FOOTER SECTIONS */
+
+.site-footer,
+.site-footer .footer-brand-row,
+.site-footer .footer-navigation,
+.site-footer .footer-contact-section,
+.site-footer .footer-bottom {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.site-footer .footer-navigation {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.site-footer .footer-bottom {
+    border-top: none !important;
+}
+
+/* =========================================
+   FOOTER CONTACT — RESPONSIVE LAYOUT
+========================================= */
+
+.footer-contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 18px;
+    padding-top: 26px;
+    text-align: center;
+}
+
+.footer-contact-section h3 {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-contact-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 16px 32px;
+}
+
+.footer-contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    margin: 0;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.footer-contact-item a {
+    overflow-wrap: anywhere;
+}
+
+/* Smaller laptops and tablets */
+@media (max-width: 900px) {
+    .footer-contact-items {
+        flex-wrap: wrap;
+        gap: 14px 24px;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    .footer-contact-section {
+        gap: 14px;
+        padding-top: 22px;
+    }
+
+    .footer-contact-items {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-contact-item {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* IMAGES HEADING — LIGHT MODE */
+html:not([data-theme="dark"]) .gallery-media-section h2.gallery-images-title,
+html[data-theme="light"] .gallery-media-section h2.gallery-images-title {
+    color: #000000 !important;
+}
+
+/* IMAGES HEADING — DARK MODE */
+html[data-theme="dark"] .gallery-media-section h2.gallery-images-title,
+body[data-theme="dark"] .gallery-media-section h2.gallery-images-title,
+.dark-theme .gallery-media-section h2.gallery-images-title {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   AGFC MOBILE HEADER — CORRECTED LAYOUT
+   Logo left | Hamburger right | Dropdown below header
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Keep the header as the positioning reference */
+    #site-header header {
+        position: relative;
+    }
+
+    /*
+       IMPORTANT:
+       The header's original flex/grid layout should remain intact.
+       Only hide the desktop Give button.
+    */
+
+    #site-header header > nav .give-btn:not(.mobile-give) {
+        display: none !important;
+    }
+
+    /* Hamburger remains on the right */
+    #site-header .mobile-menu-btn {
+        display: flex !important;
+        flex: 0 0 42px;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        position: relative;
+        z-index: 1002;
+    }
+
+    /*
+       Dropdown is removed from normal document flow.
+       Opening it will not push the logo or page content down.
+    */
+    #site-header .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        z-index: 1001;
+        background: var(--surface);
+        padding: 15px 5%;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    #site-header .mobile-menu.active {
+        display: block !important;
+    }
+
+    /* Give remains available inside the dropdown */
+    #site-header .mobile-menu .mobile-give {
+        display: block !important;
+        width: 100%;
+        margin-top: 0px;
+        text-align: center;
+        background-color: black;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #site-header .mobile-menu {
+        position: absolute !important;
+        top: 100% !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        transform: none !important;
+    }
+
+    #site-header .mobile-menu-btn {
+        align-self: center !important;
+        margin-top: 0 !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    #site-header .mobile-menu-btn {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE NAVBAR — FIX HAMBURGER VERTICAL POSITION
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Remove unwanted vertical spacing from the navbar */
+    #site-header .navbar {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* Control the actual navigation row */
+    #site-header .navbar .nav-inner {
+        position: relative !important;
+        min-height: 65px !important;
+        height: 65px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Keep the hamburger vertically centered in the navbar */
+    #site-header .navbar .mobile-menu-btn {
+        position: absolute !important;
+        top: 50% !important;
+        right: 0 !important;
+        transform: translateY(-50%) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 42px !important;
+        height: 42px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        flex: none !important;
+        z-index: 1002 !important;
+    }
+
+    /* Preserve the logo's position */
+    #site-header .navbar .church-logo {
+        margin-top: 0 !important;
+        align-self: center !important;
+    }
+
+    /* Keep the dropdown directly below the navigation row */
+    #site-header .navbar .mobile-menu {
+        top: 100% !important;
+        margin-top: 0 !important;
+        transform: none !important;
+    }
+
+}
+
+
+/* Reusable subtle hover effect */
+.interactive-card {
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .interactive-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgb(0 0 0 / 10%);
+    }
+}
+
+/* Smooth image appearance */
+.image-frame {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 250ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .image-frame:hover img {
+        transform: scale(1.025);
+    }
+}
