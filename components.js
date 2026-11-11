@@ -1,0 +1,734 @@
+
+
+const churchInfo = {
+
+    name: "Amazing Grace Family Care Foundation",
+
+    shortName: "AGFC",
+
+    location: "Aviation Street, Mradi Embakasi, Nairobi, Kenya",
+
+    phone: "+254 724 616 651",
+
+    email: "amazinggracefamilycare@outlook.com",
+
+    address: "Aviation Street, Mradi Embakasi, Nairobi, Kenya",
+
+    serviceTimes: {
+
+        sunday:
+            "Sunday — Contact us for details",
+
+        midweek:
+            "Midweek — Contact us for details",
+
+        youth:
+            "Youth & Family Activities — Contact us for details"
+
+    },
+
+    facebook:
+        "https://www.facebook.com/profile.php?id=100064535778925",
+
+    youtube:
+        "#",
+
+    instagram:
+        "https://www.instagram.com/Amazing%20Grace%20Family%20Care%20Foundation/"
+
+};
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+function renderHeader() {
+
+    const header =
+        document.getElementById("site-header");
+
+
+    if (!header) {
+        return;
+    }
+
+
+    header.innerHTML = `
+
+        <header class="main-header">
+
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVIGATION -->
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+    <div class="container nav-inner">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="church-logo"
+        >
+
+            <div class="logo-symbol">
+
+                <img
+                    src="logo.jpg"
+                    alt="Amazing Grace Family Care Foundation logo"
+                >
+
+            </div>
+
+
+            <div class="logo-text">
+
+                <strong>
+                    ${churchInfo.shortName}
+                </strong>
+
+                <span>
+                    Faith • Hope • Love
+                </span>
+
+            </div>
+
+        </a>
+
+
+                    <!-- DESKTOP NAVIGATION -->
+
+                    <div class="desktop-nav">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="about.html">
+                            About
+                        </a>
+
+                        <a href="ministries.html">
+                         The AGFC Family
+                        </a>
+
+                     <!--
+<a href="sermons.html">
+    Sermons
+</a>
+-->
+
+                <a href="community-outreach.html">Community Outreach</a>
+
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+
+                        <a href="contact.html">
+                            Contact
+                        </a>
+
+                    </div>
+
+
+
+                  <!-- DESKTOP ACTIONS -->
+<div class="nav-action">
+
+    <!-- THEME TOGGLE -->
+    <button
+        class="theme-toggle"
+        id="theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Toggle light/dark mode"
+    >
+        <img
+            src="theme.png"
+            id="theme-icon"
+            alt=""
+            class="theme-toggle-img"
+        >
+    </button>
+
+</div>
+
+
+                        <!-- GIVE -->
+
+                        <a
+                            href="#give"
+                            class="give-btn"
+                            data-open-give-modal
+                            aria-haspopup="dialog"
+                        >
+                            Give
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- MOBILE MENU BUTTON -->
+
+                    <button
+                        class="mobile-menu-btn"
+                        id="mobile-menu-btn"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <div
+                    class="mobile-menu"
+                    id="mobile-menu"
+                >
+
+                    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="ministries.html">Ministries</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="contact.html">Contact</a>
+
+
+                    <a
+                        href="#give"
+                        class="mobile-give give-btn"
+                        data-open-give-modal
+                        aria-haspopup="dialog"
+                    >
+                        Give
+                    </a>
+
+
+
+                    <!-- MOBILE THEME -->
+
+                    <div class="mobile-theme-row">
+
+                        <span>
+                            Appearance
+                        </span>
+
+
+                        <button
+                            class="theme-toggle mobile-theme-toggle"
+                            id="mobile-theme-toggle"
+                            type="button"
+                            aria-label="Switch to dark mode"
+                            title="Toggle light/dark mode"
+                        >
+
+                            <span id="mobile-theme-icon">
+                                ☾
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+    `;
+
+
+    setupMobileMenu();
+
+}
+
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+function setupMobileMenu() {
+
+    const button =
+        document.getElementById(
+            "mobile-menu-btn"
+        );
+
+
+    const menu =
+        document.getElementById(
+            "mobile-menu"
+        );
+
+
+    if (!button || !menu) {
+        return;
+    }
+
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                menu.classList.toggle(
+                    "active"
+                );
+
+
+            button.classList.toggle(
+                "active",
+                isOpen
+            );
+
+
+            button.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        }
+    );
+
+
+    menu
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    menu.classList.remove(
+                        "active"
+                    );
+
+
+                    button.classList.remove(
+                        "active"
+                    );
+
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+}
+
+
+
+/* =========================================================
+   LIGHT / DARK MODE
+   ========================================================= */
+
+function setupTheme() {
+
+    const desktopToggle =
+        document.getElementById(
+            "theme-toggle"
+        );
+
+
+    const mobileToggle =
+        document.getElementById(
+            "mobile-theme-toggle"
+        );
+
+
+    const desktopIcon =
+        document.getElementById(
+            "theme-icon"
+        );
+
+
+    const mobileIcon =
+        document.getElementById(
+            "mobile-theme-icon"
+        );
+
+
+    function applyTheme(theme) {
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            theme
+        );
+
+
+        localStorage.setItem(
+            "churchTheme",
+            theme
+        );
+
+
+        const icon =
+            theme === "dark"
+                ? "☀"
+                : "☾";
+
+
+        if (desktopIcon) {
+
+            desktopIcon.textContent =
+                icon;
+
+        }
+
+
+        if (mobileIcon) {
+
+            mobileIcon.textContent =
+                icon;
+
+        }
+
+
+        if (desktopToggle) {
+
+            desktopToggle.setAttribute(
+                "aria-label",
+                theme === "dark"
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+
+        }
+
+
+        if (mobileToggle) {
+
+            mobileToggle.setAttribute(
+                "aria-label",
+                theme === "dark"
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
+
+        }
+
+    }
+
+
+
+    /* LOAD SAVED THEME */
+
+    const savedTheme =
+        localStorage.getItem(
+            "churchTheme"
+        );
+
+
+    if (
+        savedTheme === "dark" ||
+        savedTheme === "light"
+    ) {
+
+        applyTheme(savedTheme);
+
+    } else {
+
+        const prefersDark =
+            window.matchMedia &&
+            window.matchMedia(
+                "(prefers-color-scheme: dark)"
+            ).matches;
+
+
+        applyTheme(
+            prefersDark
+                ? "dark"
+                : "light"
+        );
+
+    }
+
+
+
+    /* DESKTOP TOGGLE */
+
+    if (desktopToggle) {
+
+        desktopToggle.addEventListener(
+            "click",
+            () => {
+
+                const currentTheme =
+                    document.documentElement
+                        .getAttribute(
+                            "data-theme"
+                        );
+
+
+                applyTheme(
+                    currentTheme === "dark"
+                        ? "light"
+                        : "dark"
+                );
+
+            }
+        );
+
+    }
+
+
+
+    /* MOBILE TOGGLE */
+
+    if (mobileToggle) {
+
+        mobileToggle.addEventListener(
+            "click",
+            () => {
+
+                const currentTheme =
+                    document.documentElement
+                        .getAttribute(
+                            "data-theme"
+                        );
+
+
+                applyTheme(
+                    currentTheme === "dark"
+                        ? "light"
+                        : "dark"
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+function renderFooter() {
+
+    const footer =
+        document.getElementById(
+            "site-footer"
+        );
+
+
+    if (!footer) {
+        return;
+    }
+
+
+footer.innerHTML = `
+    <footer class="site-footer">
+
+        <div class="container footer-container">
+
+            <!-- ROW 1: LOGO AND SOCIAL MEDIA -->
+            <div class="footer-brand-row">
+
+                <a href="index.html" class="footer-logo"
+                   aria-label="${churchInfo.name} home">
+
+                    <div class="footer-logo-symbol">
+                        <img
+                            src="logo.jpg"
+                            alt="${churchInfo.name} logo"
+                        >
+                    </div>
+
+                    <div class="footer-logo-text">
+                        <strong>${churchInfo.shortName}</strong>
+                        <span>Faith • Hope • Love</span>
+                    </div>
+
+                </a>
+
+                <div class="social-links" aria-label="Social media">
+
+                    <a
+                        href="${churchInfo.facebook}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                    >
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+                            alt=""
+                        >
+                    </a>
+
+                    <a
+                        href="${churchInfo.instagram}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                            alt=""
+                        >
+                    </a>
+
+                    <a
+                        href="${churchInfo.youtube}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube"
+                    >
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+                            alt=""
+                        >
+                    </a>
+
+                </div>
+
+            </div>
+
+           
+<!-- ROW 3: CONTACT US -->
+<div class="footer-contact-section">
+
+    <h3>Contact Us</h3>
+
+    <div class="footer-contact-items">
+
+        <p class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">📍</span>
+            <span>${churchInfo.address}</span>
+        </p>
+
+        <p class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">📞</span>
+            <a href="tel:${churchInfo.phone}">
+                ${churchInfo.phone}
+            </a>
+        </p>
+
+        <p class="footer-contact-item">
+            <span class="footer-contact-icon" aria-hidden="true">✉</span>
+            <a href="mailto:${churchInfo.email}">
+                ${churchInfo.email}
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+     
+
+    </footer>
+`;
+
+}
+
+/* =========================================================
+   DONATION MODAL LOADER
+   Loads the shared donation modal on every page that uses
+   components.js, without adding duplicate script instances.
+   Keep give-modal.js and give-modal.css beside this file.
+   ========================================================= */
+function ensureGiveModalLoaded() {
+    const componentsScript = Array.from(document.scripts).find(script => /(?:^|\/)components\.js(?:[?#].*)?$/.test(script.getAttribute("src") || ""));
+    const componentsBase = componentsScript && componentsScript.src ? componentsScript.src : window.location.href;
+    const alreadyLoaded = Array.from(document.scripts).some(script => {
+        const src = script.getAttribute("src") || "";
+        return /(?:^|\/)give-modal\.js(?:[?#].*)?$/.test(src);
+    });
+
+    if (alreadyLoaded || document.querySelector("[data-agfc-give-modal-loader]")) {
+        return;
+    }
+
+    const script = document.createElement("script");
+    script.src = new URL("give-modal.js", componentsBase).href;
+    script.defer = true;
+    script.dataset.agfcGiveModalLoader = "true";
+    document.body.appendChild(script);
+}
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        renderHeader();
+
+        renderFooter();
+
+        setupTheme();
+
+        ensureGiveModalLoaded();
+
+    }
+);
+
+
+/* =========================================================
+   APPLE-STYLE IMAGE REVEAL ON SCROLL
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const images = document.querySelectorAll(".scroll-image");
+
+    const imageObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+
+                    // Run only once
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    images.forEach(image => {
+        imageObserver.observe(image);
+    });
+
+});
