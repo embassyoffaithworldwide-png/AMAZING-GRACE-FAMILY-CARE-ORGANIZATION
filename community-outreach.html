@@ -1,19 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="theme-color"
-        content="#07152e"
-    >
+    <meta name="theme-color" content="#07152e">
 
     <title>Embassy of Faith Worldwide</title>
 
@@ -22,10 +16,10 @@
         content="Join Embassy of Faith Worldwide in Nairobi, Kenya. Growing in the Word, grounded in faith, and equipped to impact the world."
     >
 
-    <!-- Load the main stylesheet -->
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Preload your main hero image -->
+    <!-- Preload Main Hero Image -->
     <link
         rel="preload"
         as="image"
@@ -33,7 +27,7 @@
         fetchpriority="high"
     >
 
-    <!-- Preload a locally hosted font, if used -->
+    <!-- Preload Local Font -->
     <link
         rel="preload"
         href="fonts/site-font.woff2"
@@ -42,32 +36,23 @@
         crossorigin
     >
 
-    <!-- Run JavaScript without blocking HTML parsing -->
+    <!-- Main JavaScript -->
     <script src="script.js" defer></script>
 </head>
 
-
-
 <body>
-
 
     <!-- SHARED HEADER -->
     <div id="site-header"></div>
 
 
-    <!-- =====================================================
-         COMMUNITY OUTREACH
-         ===================================================== -->
-
     <main>
 
-
-        <!-- =================================================
+        <!-- =========================================
              PAGE HERO
-             ================================================= -->
+        ========================================== -->
 
         <section class="page-hero">
-
             <div class="container">
 
                 <span class="page-hero-label" style="display: none;">
@@ -86,29 +71,22 @@
                 </p>
 
             </div>
-
         </section>
 
 
-
-        <!-- =================================================
+        <!-- =========================================
              INTRODUCTION
-             ================================================= -->
+        ========================================== -->
 
         <section class="about-intro">
-
             <div class="container about-intro-grid">
 
-
                 <div class="about-intro-image">
-
                     <img
                         src="compassion.jpg"
                         alt="Amazing Grace Family Care Foundation community outreach"
                     >
-
                 </div>
-
 
                 <div class="about-intro-content">
 
@@ -143,164 +121,1052 @@
                 </div>
 
             </div>
-
         </section>
 
+        <!-- =========================================
+             WORK PLAN & EVENTS
+        ========================================== -->
 
-
-      
-
-        
-
- <section class="ministries-preview">
+        <section class="ministries-preview workplan-events" id="work-plan">
 
             <div class="container">
 
+                <!-- SECTION HEADING -->
 
                 <div class="section-heading">
 
-                    <span class="section-label"  style="display: none;">
-                        COMMUNITY OUTREACH
-                    </span>
-
-                    <h2>
-              Work Plan
-                    </h2>
+                    <h2>Our Work Plan & Events</h2>
 
                     <p>
-                        We believe that care becomes meaningful
-                        when faith and compassion are translated
-                        into practical action.
+                        Explore our weekly activities, monthly
+                        programmes and yearly community initiatives.
+                        Every activity represents another opportunity
+                        to serve, support and transform lives.
                     </p>
 
-                </div><br>
+                </div>
 
 
-                <div class="ministry-grid">
+                <!-- =================================
+                     TAB NAVIGATION
+                ================================== -->
 
+                <div
+                    class="workplan-tabs"
+                    role="tablist"
+                    aria-label="Work plan schedule"
+                >
 
-                    <!-- OUTREACH -->
+                    <button
+                        type="button"
+                        class="workplan-tab active"
+                        id="weekly-tab"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="weekly-workplan"
+                        data-tab="weekly-workplan"
+                    >
+                        Weekly
+                    </button>
 
-                    <article class="ministry-card">
+                    <button
+                        type="button"
+                        class="workplan-tab"
+                        id="monthly-tab"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="monthly-workplan"
+                        data-tab="monthly-workplan"
+                        tabindex="-1"
+                    >
+                        Monthly
+                    </button>
 
-                        <img
-                            src="1.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                             July
-                            </h3>
-
-                            <p>
-                            Mobilization of the beneficiaries into
-discussion groups
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="ICT.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                             July, August
-                            </h3>
-
-                            <p>
-                      Development of Information, Education and
-communication materials (IEC) materials
-discussion groups
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                      <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="3.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                             July
-                            </h3>
-
-                            <p>
-                           Conduct one TOT
-discussion groups
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
+                    <button
+                        type="button"
+                        class="workplan-tab"
+                        id="yearly-tab"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="yearly-workplan"
+                        data-tab="yearly-workplan"
+                        tabindex="-1"
+                    >
+                        Yearly
+                    </button>
 
                 </div>
+
+
+                <!-- =================================
+                     WEEKLY ACTIVITIES
+                ================================== -->
+
+                <section
+                    class="workplan-period active"
+                    id="weekly-workplan"
+                    role="tabpanel"
+                    aria-labelledby="weekly-tab"
+                >
+
+                    <div class="workplan-period-heading">
+
+                        <div>
+
+                            <span class="workplan-overline">
+                                RECURRING COMMUNITY PROGRAMMES
+                            </span>
+
+                            <h3>Weekly Activities</h3>
+
+                            <p>
+                                Regular programmes designed to
+                                strengthen, encourage and support
+                                our communities.
+                            </p>
+
+                        </div>
+
+                        <span class="workplan-period-badge">
+                            WEEKLY
+                        </span>
+
+                    </div>
+
+
+                    <div class="workplan-grid">
+
+
+                        <!-- WEEKLY EVENT 1 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=85"
+                                    alt="Volunteers working together during a community outreach activity"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    COMMUNITY OUTREACH
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    EVERY MONDAY
+                                </span>
+
+                                <h4>
+                                    Community Engagement & Mobilisation
+                                </h4>
+
+                                <p>
+                                    Connecting with community members,
+                                    identifying needs and encouraging
+                                    participation in community programmes.
+                                </p>
+
+                                <dl class="workplan-details">
+
+                                    <div>
+                                        <dt>Day</dt>
+                                        <dd>Monday</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>Every week</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>9:00 AM – 12:00 PM</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Community locations</dd>
+                                    </div>
+
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- WEEKLY EVENT 2 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85"
+                                    alt="Community members participating in a group discussion"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    COMMUNITY EDUCATION
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    EVERY WEDNESDAY
+                                </span>
+
+                                <h4>
+                                    Community Learning & Awareness
+                                </h4>
+
+                                <p>
+                                    Facilitating educational discussions
+                                    and sharing useful information on
+                                    health, family welfare and community
+                                    development.
+                                </p>
+
+                                <dl class="workplan-details">
+
+                                    <div>
+                                        <dt>Day</dt>
+                                        <dd>Wednesday</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>Every week</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>10:00 AM – 1:00 PM</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Community meeting centres</dd>
+                                    </div>
+
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- WEEKLY EVENT 3 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
+                                    alt="Volunteers supporting children and families"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    FAMILY SUPPORT
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    EVERY FRIDAY
+                                </span>
+
+                                <h4>
+                                    Family Care & Beneficiary Follow-up
+                                </h4>
+
+                                <p>
+                                    Checking on beneficiary households,
+                                    identifying emerging needs and
+                                    connecting vulnerable families
+                                    with available support.
+                                </p>
+
+                                <dl class="workplan-details">
+
+                                    <div>
+                                        <dt>Day</dt>
+                                        <dd>Friday</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>Every week</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>9:00 AM – 12:00 PM</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Beneficiary households</dd>
+                                    </div>
+
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     MONTHLY ACTIVITIES
+                ================================== -->
+
+                <section
+                    class="workplan-period"
+                    id="monthly-workplan"
+                    role="tabpanel"
+                    aria-labelledby="monthly-tab"
+                    hidden
+                >
+
+                    <div class="workplan-period-heading">
+
+                        <div>
+
+                            <span class="workplan-overline">
+                                PROJECT IMPLEMENTATION
+                            </span>
+
+                            <h3>Monthly Programmes</h3>
+
+                            <p>
+                                Planned projects and activities
+                                implemented throughout the year.
+                            </p>
+
+                        </div>
+
+                        <span class="workplan-period-badge">
+                            MONTHLY
+                        </span>
+
+                    </div>
+
+
+                    <div class="workplan-grid">
+
+
+                        <!-- MONTHLY EVENT 1 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="1.jpg"
+                                    alt="Beneficiary mobilisation and community discussion groups"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    COMMUNITY MOBILISATION
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">JULY</span>
+
+                                <h4>
+                                    Beneficiary Mobilisation & Discussion Groups
+                                </h4>
+
+                                <p>
+                                    Mobilisation of beneficiaries into
+                                    discussion groups.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 2 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="ICT.jpg"
+                                    alt="Information, Education and Communication materials"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    EDUCATION & COMMUNICATION
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    JULY – AUGUST
+                                </span>
+
+                                <h4>Development of IEC Materials</h4>
+
+                                <p>
+                                    Development of Information,
+                                    Education and Communication
+                                    (IEC) materials.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July – August</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 3 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="3.jpg"
+                                    alt="Training of trainers session"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    CAPACITY BUILDING
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">JULY</span>
+
+                                <h4>Training of Trainers (TOT)</h4>
+
+                                <p>
+                                    Conduct one Training of Trainers
+                                    (TOT) session.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 4 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="4.jpg"
+                                    alt="Open-area community awareness meeting"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    COMMUNITY AWARENESS
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    JULY – SEPTEMBER
+                                </span>
+
+                                <h4>Open-Area Community Meetings</h4>
+
+                                <p>
+                                    Conduct open-area community
+                                    meetings on post-COVID-19
+                                    prevention measures.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July – September</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Community locations</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 5 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="market.jpg"
+                                    alt="Community market assessment"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    LIVELIHOODS & RESEARCH
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">JULY</span>
+
+                                <h4>Community Market Assessment</h4>
+
+                                <p>
+                                    Conduct a market assessment to
+                                    form a basis for viability and
+                                    profitability analysis.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Market location</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 6 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="community.jpg"
+                                    alt="Community household identification activity"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    HOUSEHOLD SUPPORT
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">JULY</span>
+
+                                <h4>Vulnerable Household Identification</h4>
+
+                                <p>
+                                    Identify vulnerable households
+                                    who are direct and indirect
+                                    beneficiaries of the project.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Community locations</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 7 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="492715498_1090652186429297_5656485719916727481_n.jpg"
+                                    alt="Food items prepared for beneficiaries"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    FOOD ASSISTANCE
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    JULY – SEPTEMBER
+                                </span>
+
+                                <h4>Food Distribution to Beneficiaries</h4>
+
+                                <p>
+                                    Distribution of food items to
+                                    beneficiaries in various locations.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July – September</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Various locations</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- MONTHLY EVENT 8 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="hygiene kits.jpg"
+                                    alt="Hygiene kits prepared for distribution"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    HEALTH & HYGIENE
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    JULY – SEPTEMBER
+                                </span>
+
+                                <h4>Hygiene Kit Distribution</h4>
+
+                                <p>
+                                    Distribution of hygiene kits
+                                    to beneficiaries as part of
+                                    the project activities.
+                                </p>
+
+                                <dl class="workplan-details">
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>July – September</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Various locations</dd>
+                                    </div>
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     YEARLY ACTIVITIES
+                ================================== -->
+
+                <section
+                    class="workplan-period"
+                    id="yearly-workplan"
+                    role="tabpanel"
+                    aria-labelledby="yearly-tab"
+                    hidden
+                >
+
+                    <div class="workplan-period-heading">
+
+                        <div>
+
+                            <span class="workplan-overline">
+                                ANNUAL COMMUNITY INITIATIVES
+                            </span>
+
+                            <h3>Yearly Events & Initiatives</h3>
+
+                            <p>
+                                Major programmes and special
+                                community initiatives carried out
+                                throughout the year.
+                            </p>
+
+                        </div>
+
+                        <span class="workplan-period-badge">
+                            YEARLY
+                        </span>
+
+                    </div>
+
+
+                    <div class="workplan-grid">
+
+
+                        <!-- YEARLY EVENT 1 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=85"
+                                    alt="Volunteers serving members of the community"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    ANNUAL OUTREACH
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    ANNUAL PROGRAMME
+                                </span>
+
+                                <h4>
+                                    Annual Community Outreach
+                                </h4>
+
+                                <p>
+                                    A special outreach initiative
+                                    bringing together volunteers
+                                    and community members to support
+                                    vulnerable households.
+                                </p>
+
+                                <dl class="workplan-details">
+
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>Once every year</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>Selected community locations</dd>
+                                    </div>
+
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- YEARLY EVENT 2 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85"
+                                    alt="Families and community members gathering together"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    FAMILY & CHILD WELFARE
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    ANNUAL PROGRAMME
+                                </span>
+
+                                <h4>
+                                    Family & Children's Welfare Day
+                                </h4>
+
+                                <p>
+                                    A special programme focused on
+                                    promoting family welfare, children's
+                                    wellbeing and community solidarity.
+                                </p>
+
+                                <dl class="workplan-details">
+
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>Once every year</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- YEARLY EVENT 3 -->
+
+                        <article class="workplan-card">
+
+                            <div class="workplan-banner">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=900&q=85"
+                                    alt="Participants attending a community training programme"
+                                    loading="lazy"
+                                >
+
+                                <span class="workplan-category">
+                                    TRAINING & DEVELOPMENT
+                                </span>
+
+                            </div>
+
+                            <div class="workplan-card-content">
+
+                                <span class="workplan-month">
+                                    ANNUAL PROGRAMME
+                                </span>
+
+                                <h4>
+                                    Annual Community Development Forum
+                                </h4>
+
+                                <p>
+                                    Bringing together community leaders,
+                                    volunteers and stakeholders to
+                                    discuss progress, share experiences
+                                    and plan future initiatives.
+                                </p>
+
+                                <dl class="workplan-details">
+
+                                    <div>
+                                        <dt>Project period</dt>
+                                        <dd>Once every year</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Date</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Time</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Venue</dt>
+                                        <dd>To be announced</dd>
+                                    </div>
+
+                                </dl>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
 
             </div>
 
         </section>
 
 
-
-
-        <!-- =================================================
+        <!-- =========================================
              FEATURED OUTREACH
-             ================================================= -->
+        ========================================== -->
 
         <section class="story-section">
 
             <div class="container story-grid">
 
-
                 <div class="story-content">
 
-                    <span class="section-label" style="display: none;">
+                    <span class="section-label">
                         FEATURED OUTREACH
                     </span>
 
@@ -331,10 +1197,7 @@ discussion groups
                         institutions within the community.
                     </p>
 
-                    <a
-                        href="contact.html"
-                        class="text-link"
-                    >
+                    <a href="contact.html" class="text-link">
                         Connect With AGFC →
                     </a>
 
@@ -346,219 +1209,157 @@ discussion groups
                     <img
                         src="action.jpg"
                         alt="Community outreach to children"
+                        loading="lazy"
                     >
 
                 </div>
 
-
             </div>
 
         </section>
 
+    </main>
 
 
+    <!-- =========================================
+         SHARED FOOTER
+    ========================================== -->
 
- <section class="ministries-preview">
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-             
-
-
-                <div class="ministry-grid">
-
-
-                    <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="4.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                             July, August, September
-                            </h3>
-
-                            <p>
-                         Conduct Open area community meetings on
-the Post covid-19 prevention measures
-discussion groups
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    
-
-                    <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="market.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                             July
-                            </h3>
-
-                            <p>
-                   Conduct one market assessment to form a
-basis for viability/profitability analysis
-discussion groups
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-
-                  
-                    <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="community.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                             July
-                            </h3>
-
-                            <p>
-                      Identification of the vulnerable households
-(direct and indirect beneficiaries of this
-project.
-discussion groups)
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                              <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="492715498_1090652186429297_5656485719916727481_n.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                    July, August, September
-                            </h3>
-
-                            <p>
-        Actual distribution of food items to the
-beneficiaries in various locations
-                            </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                              <!-- OUTREACH -->
-
-                    <article class="ministry-card">
-
-                        <img
-                            src="hygiene kits.jpg"
-                            alt="Community outreach"
-                        >
-
-                        <div class="ministry-content">
-
-                            <span style="display: none;">
-                                OUTREACH
-                            </span>
-
-                            <h3>
-                     July, August, September
-                            </h3>
-
-                            <p>
-     Distribution of hygiene kits       </p>
-
-                            <a href="ministries.html" style="display: none;">
-                                Learn More →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-    <!-- SHARED FOOTER -->
     <div id="site-footer"></div>
 
 
-
-    <!-- COMPONENTS -->
+    <!-- SHARED COMPONENTS -->
     <script src="components.js"></script>
 
 
-</body>
+    <!-- =========================================
+         WORK PLAN TAB FUNCTIONALITY
+    ========================================== -->
 
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const tabs = document.querySelectorAll(".workplan-tab");
+            const panels = document.querySelectorAll(".workplan-period");
+
+            function activateTab(selectedTab) {
+
+                const targetId = selectedTab.dataset.tab;
+
+                // Update tab buttons
+                tabs.forEach(tab => {
+
+                    const isActive = tab === selectedTab;
+
+                    tab.classList.toggle("active", isActive);
+
+                    tab.setAttribute(
+                        "aria-selected",
+                        isActive ? "true" : "false"
+                    );
+
+                    tab.tabIndex = isActive ? 0 : -1;
+
+                });
+
+
+                // Show selected panel and hide the rest
+                panels.forEach(panel => {
+
+                    const isActive = panel.id === targetId;
+
+                    panel.hidden = !isActive;
+
+                    panel.classList.toggle(
+                        "active",
+                        isActive
+                    );
+
+                });
+
+            }
+
+
+            // Tab click functionality
+            tabs.forEach(tab => {
+
+                tab.addEventListener("click", function () {
+
+                    activateTab(this);
+
+                });
+
+            });
+
+
+            // Keyboard navigation
+            tabs.forEach((tab, index) => {
+
+                tab.addEventListener("keydown", function (event) {
+
+                    let nextIndex = index;
+
+                    if (event.key === "ArrowRight") {
+
+                        nextIndex = (index + 1) % tabs.length;
+
+                    } else if (event.key === "ArrowLeft") {
+
+                        nextIndex = (index - 1 + tabs.length) % tabs.length;
+
+                    } else if (event.key === "Home") {
+
+                        nextIndex = 0;
+
+                    } else if (event.key === "End") {
+
+                        nextIndex = tabs.length - 1;
+
+                    } else {
+
+                        return;
+
+                    }
+
+                    event.preventDefault();
+
+                    tabs[nextIndex].focus();
+
+                    activateTab(tabs[nextIndex]);
+
+                });
+
+            });
+
+
+            // Weekly tab is selected by default
+            if (tabs.length > 0) {
+
+                activateTab(tabs[0]);
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
+
+      
+    </main>
+
+
+    <!-- =============================================
+         SHARED FOOTER
+    ============================================== -->
+
+    <div id="site-footer"></div>
+
+
+    <!-- SHARED COMPONENTS -->
+    <script src="components.js"></script>
+
+</body>
 </html>
