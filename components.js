@@ -163,7 +163,17 @@ function renderHeader() {
 </div>
 
 
-
+           <!-- GIVE -->
+<!--
+<a
+    href="#give"
+    class="give-btn"
+    data-open-give-modal
+    aria-haspopup="dialog"
+>
+    Give
+</a>
+-->
 
 
 
@@ -205,6 +215,7 @@ function renderHeader() {
     <a href="contact.html">Contact</a>
 
 
+           <!-- GIVE -->
                     <a
                         href="#give"
                         class="mobile-give give-btn"
@@ -214,7 +225,7 @@ function renderHeader() {
                         Give
                     </a>
 
-
+-->
 
                     <!-- MOBILE THEME -->
 
