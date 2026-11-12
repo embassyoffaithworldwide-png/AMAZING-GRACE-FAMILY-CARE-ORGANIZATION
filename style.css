@@ -9630,3 +9630,46 @@ body.dark .objectives-content .objectives-intro,
     }
 
 }
+/* LEFT ALIGN BOARD SECTION HEADING */
+.board-heading {
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.board-heading .board-label,
+.board-heading h2,
+.board-heading p {
+    text-align: left;
+}
+/* ADD SPACE ABOVE GOVERNANCE SECTION */
+.about-intro {
+    padding-top: 130px;
+    margin-top: 0 !important;
+}
+
+/* MAKE GOVERNANCE SECTION BACKGROUND TRANSPARENT */
+.about-intro {
+    background: transparent !important;
+}
+
+.about-intro-image {
+    margin-top: 45px;
+}
+/* Increase board image width on larger screens only */
+@media (min-width: 1024px) {
+    .board-image {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+
+.workplan-period-badge {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #ffffff !important;
+    background: var(--primary) !important;
+    border: 1px solid var(--primary) !important;
+}
