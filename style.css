@@ -7884,3 +7884,1561 @@ body[data-theme="dark"] .gallery-media-section h2.gallery-images-title,
         transform: scale(1.025);
     }
 }
+
+
+
+/* =========================================================
+   WORK PLAN & EVENTS SECTION
+   Embassy of Faith Worldwide
+========================================================= */
+
+.workplan-events {
+    position: relative;
+    padding: 90px 0;
+    background: #f5f7fb;
+    overflow: hidden;
+}
+
+.workplan-events .container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.workplan-events .section-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.workplan-events .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #c18a32;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.workplan-events .section-heading h2 {
+    margin: 0 0 16px;
+    color: #07152e;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.workplan-events .section-heading p {
+    margin: 0;
+    color: #657086;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SCHEDULE NAVIGATION
+========================================================= */
+
+.workplan-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 65px;
+}
+
+.workplan-tabs a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 115px;
+    padding: 12px 25px;
+    border: 1px solid #dce2ec;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #07152e;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.workplan-tabs a:hover,
+.workplan-tabs a:focus {
+    background: #07152e;
+    border-color: #07152e;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   WORK PLAN PERIODS
+========================================================= */
+
+.workplan-period {
+    margin-bottom: 75px;
+    scroll-margin-top: 100px;
+}
+
+.workplan-period:last-child {
+    margin-bottom: 0;
+}
+
+.workplan-period-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dfe4ed;
+}
+
+.workplan-overline {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #c18a32;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.workplan-period-heading h3 {
+    margin: 0 0 8px;
+    color: #07152e;
+    font-size: clamp(23px, 3vw, 30px);
+    font-weight: 800;
+}
+
+.workplan-period-heading p {
+    margin: 0;
+    color: #657086;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.workplan-period-badge {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: #07152e;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   MONTHLY EVENT GRID
+========================================================= */
+
+.workplan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   EVENT CARDS
+========================================================= */
+
+.workplan-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e6eaf0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 6px 22px rgba(7, 21, 46, 0.06);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.workplan-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(7, 21, 46, 0.12);
+}
+
+
+/* EVENT IMAGE */
+
+.workplan-banner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #e7ebf2;
+}
+
+.workplan-banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.workplan-card:hover .workplan-banner img {
+    transform: scale(1.06);
+}
+
+
+/* EVENT CATEGORY LABEL */
+
+.workplan-category {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    max-width: calc(100% - 30px);
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #c18a32;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    line-height: 1.4;
+}
+
+
+/* EVENT CARD CONTENT */
+
+.workplan-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 23px;
+}
+
+.workplan-month {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    color: #c18a32;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.workplan-card-content h4 {
+    margin: 0 0 12px;
+    color: #07152e;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.workplan-card-content > p {
+    margin: 0 0 20px;
+    color: #657086;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EVENT DETAILS
+========================================================= */
+
+.workplan-details {
+    display: grid;
+    gap: 0;
+    margin: auto 0 0;
+    padding-top: 15px;
+    border-top: 1px solid #edf0f4;
+}
+
+.workplan-details div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid #f0f2f6;
+}
+
+.workplan-details div:last-child {
+    border-bottom: none;
+}
+
+.workplan-details dt {
+    flex: 0 0 42%;
+    color: #07152e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.workplan-details dd {
+    flex: 1;
+    margin: 0;
+    color: #737e90;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: right;
+}
+
+
+/* =========================================================
+   EMPTY WEEKLY / YEARLY PROGRAMME STATES
+========================================================= */
+
+.workplan-empty {
+    padding: 35px 25px;
+    border: 1px dashed #cbd3df;
+    border-radius: 12px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.workplan-empty strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #07152e;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.workplan-empty p {
+    margin: 0;
+    color: #737e90;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .workplan-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .workplan-banner {
+        height: 210px;
+    }
+
+    .workplan-card-content {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .workplan-events {
+        padding: 60px 0;
+    }
+
+    .workplan-events .container {
+        width: 92%;
+    }
+
+    .workplan-events .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .workplan-events .section-heading p {
+        font-size: 14px;
+    }
+
+    .workplan-tabs {
+        gap: 8px;
+        margin-bottom: 45px;
+    }
+
+    .workplan-tabs a {
+        min-width: 95px;
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    .workplan-period {
+        margin-bottom: 55px;
+    }
+
+    .workplan-period-heading {
+        align-items: flex-start;
+        margin-bottom: 23px;
+    }
+
+    .workplan-period-heading h3 {
+        font-size: 22px;
+    }
+
+    .workplan-period-heading p {
+        font-size: 13px;
+    }
+
+    .workplan-period-badge {
+        padding: 7px 11px;
+        font-size: 9px;
+    }
+
+    .workplan-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .workplan-banner {
+        height: 230px;
+    }
+
+    .workplan-card-content {
+        padding: 20px;
+    }
+
+    .workplan-card-content h4 {
+        font-size: 18px;
+    }
+
+    .workplan-details dt,
+    .workplan-details dd {
+        font-size: 12px;
+    }
+
+    .workplan-empty {
+        padding: 28px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE SCREENS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .workplan-period-heading {
+        flex-wrap: wrap;
+    }
+
+    .workplan-banner {
+        height: 190px;
+    }
+
+    .workplan-card-content {
+        padding: 17px;
+    }
+
+    .workplan-tabs a {
+        min-width: 85px;
+        padding: 9px 14px;
+    }
+
+}
+
+
+/* =========================================================
+   DARK THEME SUPPORT
+========================================================= */
+
+[data-theme="dark"] .workplan-events {
+    background: #07152e;
+}
+
+[data-theme="dark"] .workplan-events .section-heading h2,
+[data-theme="dark"] .workplan-period-heading h3,
+[data-theme="dark"] .workplan-card-content h4,
+[data-theme="dark"] .workplan-details dt,
+[data-theme="dark"] .workplan-empty strong {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .workplan-events .section-heading p,
+[data-theme="dark"] .workplan-period-heading p,
+[data-theme="dark"] .workplan-card-content > p,
+[data-theme="dark"] .workplan-details dd,
+[data-theme="dark"] .workplan-empty p {
+    color: #bdc8d9;
+}
+
+[data-theme="dark"] .workplan-card,
+[data-theme="dark"] .workplan-empty,
+[data-theme="dark"] .workplan-tabs a {
+    background: #102443;
+    border-color: #263c5b;
+}
+
+[data-theme="dark"] .workplan-tabs a {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .workplan-period-heading {
+    border-color: #263c5b;
+}
+
+[data-theme="dark"] .workplan-details,
+[data-theme="dark"] .workplan-details div {
+    border-color: #263c5b;
+}
+
+[data-theme="dark"] .workplan-period-badge {
+    background: #c18a32;
+    color: #07152e;
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .workplan-card,
+    .workplan-banner img,
+    .workplan-tabs a {
+        transition: none;
+    }
+
+    .workplan-card:hover,
+    .workplan-tabs a:hover {
+        transform: none;
+    }
+
+    .workplan-card:hover .workplan-banner img {
+        transform: none;
+    }
+
+}
+
+/* =========================================
+   WORK PLAN & EVENTS SECTION
+========================================= */
+
+.workplan-events {
+    /* Inherit the platform's light/dark page background */
+    background: transparent !important;
+    color: inherit;
+    padding: 70px 0;
+    transition: color 0.3s ease;
+}
+
+/* =========================================
+   DECORATED WORK PLAN TABS
+========================================= */
+
+.workplan-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 35px auto 40px;
+    padding: 7px;
+    border-radius: 18px;
+
+    background: color-mix(
+        in srgb,
+        currentColor 6%,
+        transparent
+    );
+
+    border: 1px solid color-mix(
+        in srgb,
+        currentColor 12%,
+        transparent
+    );
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Individual tab buttons */
+
+.workplan-tabs button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 13px 27px;
+    min-width: 125px;
+
+    border: 1px solid transparent;
+    border-radius: 13px;
+
+    background: transparent;
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Small decorative icons */
+
+.workplan-tabs button::before {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.workplan-tabs button[data-tab="weekly"]::before {
+    content: "📅";
+}
+
+.workplan-tabs button[data-tab="monthly"]::before {
+    content: "🗓️";
+}
+
+.workplan-tabs button[data-tab="yearly"]::before {
+    content: "🌍";
+}
+
+/* Hover effect */
+
+.workplan-tabs button:hover:not(.active) {
+    background: color-mix(
+        in srgb,
+        currentColor 9%,
+        transparent
+    );
+
+    transform: translateY(-2px);
+}
+
+/* Active tab */
+
+.workplan-tabs button.active,
+.workplan-tabs button[aria-selected="true"] {
+    background: var(--primary-color, #b68a35);
+    color: #ffffff;
+    border-color: transparent;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.16);
+}
+
+/* Active tab hover */
+
+.workplan-tabs button.active:hover,
+.workplan-tabs button[aria-selected="true"]:hover {
+    filter: brightness(1.07);
+    transform: translateY(-2px);
+}
+
+/* Keyboard accessibility */
+
+.workplan-tabs button:focus-visible {
+    outline: 3px solid var(--primary-color, #b68a35);
+    outline-offset: 4px;
+}
+
+/* =========================================
+   TAB CONTENT ANIMATION
+========================================= */
+
+.workplan-period {
+    animation: workplanFadeIn 0.35s ease;
+}
+
+@keyframes workplanFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+    .workplan-events {
+        padding: 50px 0;
+    }
+
+    .workplan-tabs {
+        width: 100%;
+        gap: 5px;
+        padding: 5px;
+        border-radius: 14px;
+        margin: 25px auto 30px;
+    }
+
+    .workplan-tabs button {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 8px;
+        gap: 5px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+    .workplan-tabs button::before {
+        font-size: 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .workplan-tabs button,
+    .workplan-period {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+
+/* =========================================
+   WORK PLAN EVENTS: LIGHT & DARK THEMES
+========================================= */
+
+/* LIGHT MODE */
+.workplan-events {
+    background-color: #ffffff !important;
+    color: #202124;
+
+    padding: 70px 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main headings and section text */
+.workplan-events h1,
+.workplan-events h2,
+.workplan-events h3,
+.workplan-events h4,
+.workplan-events p,
+.workplan-events span,
+.workplan-events li,
+.workplan-events label {
+    color: inherit;
+}
+
+/* Supporting text */
+.workplan-events .section-subtitle,
+.workplan-events .section-description,
+.workplan-events .workplan-details,
+.workplan-events .workplan-empty {
+    color: #555555;
+}
+
+/* Tab container */
+.workplan-events .workplan-tabs {
+    background: #f1f2f4;
+    border: 1px solid #dedfe3;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Inactive tabs */
+.workplan-events .workplan-tabs button {
+    color: #333333;
+    background: transparent;
+}
+
+/* Active tab */
+.workplan-events .workplan-tabs button.active,
+.workplan-events .workplan-tabs button[aria-selected="true"] {
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #ea580c
+        );
+    color: #ffffff;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html.dark .workplan-events,
+body.dark .workplan-events,
+[data-theme="dark"] .workplan-events {
+    background-color: #000000 !important;
+    color: #f5f5f5;
+}
+
+/* Headings and general text */
+html.dark .workplan-events h1,
+html.dark .workplan-events h2,
+html.dark .workplan-events h3,
+html.dark .workplan-events h4,
+html.dark .workplan-events p,
+html.dark .workplan-events span,
+html.dark .workplan-events li,
+html.dark .workplan-events label,
+body.dark .workplan-events h1,
+body.dark .workplan-events h2,
+body.dark .workplan-events h3,
+body.dark .workplan-events h4,
+body.dark .workplan-events p,
+body.dark .workplan-events span,
+body.dark .workplan-events li,
+body.dark .workplan-events label,
+[data-theme="dark"] .workplan-events h1,
+[data-theme="dark"] .workplan-events h2,
+[data-theme="dark"] .workplan-events h3,
+[data-theme="dark"] .workplan-events h4,
+[data-theme="dark"] .workplan-events p,
+[data-theme="dark"] .workplan-events span,
+[data-theme="dark"] .workplan-events li,
+[data-theme="dark"] .workplan-events label {
+    color: #f5f5f5;
+}
+
+/* Supporting text in dark mode */
+html.dark .workplan-events .section-subtitle,
+html.dark .workplan-events .section-description,
+html.dark .workplan-events .workplan-details,
+html.dark .workplan-events .workplan-empty,
+body.dark .workplan-events .section-subtitle,
+body.dark .workplan-events .section-description,
+body.dark .workplan-events .workplan-details,
+body.dark .workplan-events .workplan-empty,
+[data-theme="dark"] .workplan-events .section-subtitle,
+[data-theme="dark"] .workplan-events .section-description,
+[data-theme="dark"] .workplan-events .workplan-details,
+[data-theme="dark"] .workplan-events .workplan-empty {
+    color: #c2c2c2;
+}
+
+/* Tab container in dark mode */
+html.dark .workplan-events .workplan-tabs,
+body.dark .workplan-events .workplan-tabs,
+[data-theme="dark"] .workplan-events .workplan-tabs {
+    background: #191919;
+    border-color: #333333;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Inactive tabs in dark mode */
+html.dark .workplan-events .workplan-tabs button,
+body.dark .workplan-events .workplan-tabs button,
+[data-theme="dark"] .workplan-events .workplan-tabs button {
+    color: #eeeeee;
+}
+
+/* Active tab remains clearly visible */
+html.dark .workplan-events .workplan-tabs button.active,
+html.dark .workplan-events .workplan-tabs button[aria-selected="true"],
+body.dark .workplan-events .workplan-tabs button.active,
+body.dark .workplan-events .workplan-tabs button[aria-selected="true"],
+[data-theme="dark"] .workplan-events .workplan-tabs button.active,
+[data-theme="dark"] .workplan-events .workplan-tabs button[aria-selected="true"] {
+      background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #ea580c
+        );
+    color: #ffffff;
+}
+
+/* Preserve individual event card backgrounds */
+.workplan-events .workplan-card {
+    /* Keep the existing card background and styling */
+    color: inherit;
+}
+
+/* Keep card text readable without changing card backgrounds */
+.workplan-events .workplan-card h3,
+.workplan-events .workplan-card h4,
+.workplan-events .workplan-card p {
+    color: inherit;
+}
+
+
+
+
+/* =========================================
+   IMPLEMENTATION OF ACTIVITIES
+========================================= */
+
+.activities-section {
+    padding: 80px 0;
+    background: var(--section-bg, #ffffff);
+    color: var(--text-color, #202124);
+}
+
+.activities-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* IMAGE */
+
+.activities-image {
+    position: relative;
+    min-height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.activities-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.activities-image-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 35px 25px 25px;
+    color: #ffffff;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+}
+
+.activities-image-caption span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #e5bd6b;
+}
+
+.activities-image-caption h3 {
+    color: #ffffff;
+    font-size: 23px;
+    margin: 8px 0 0;
+}
+
+
+/* CONTENT */
+
+.activities-content {
+    min-width: 0;
+}
+
+.activities-content .section-label {
+    display: inline-block;
+    color:        linear-gradient(
+            135deg,
+            var(--accent),
+            #ea580c
+        );;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.activities-content > h2 {
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.2;
+    margin: 0 0 15px;
+    color: inherit;
+}
+
+.activities-intro {
+    color: inherit;
+    opacity: 0.78;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* MAIN OUTPUT */
+
+.main-output-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px;
+    margin-bottom: 30px;
+    border-radius: 14px;
+
+    background: color-mix(
+        in srgb,
+        var(--primary-color, #b68a35) 9%,
+        transparent
+    );
+
+    border-left: 4px solid  #8D0F7B;;
+}
+
+.output-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #8D0F7B;;
+    color: white;
+    font-size: 18px;
+}
+
+.output-label {
+    display: block;
+    color: var(--primary-color, #b68a35);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin-bottom: 8px;
+}
+
+.main-output-box p {
+    color: inherit;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* ACTIVITIES LIST */
+
+.activities-list > h3 {
+    font-size: 19px;
+    margin: 0 0 17px;
+    color: inherit;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-number {
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+
+      background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #ea580c
+        );
+
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.activity-text h4 {
+    font-size: 15px;
+    margin: 1px 0 6px;
+    color: inherit;
+}
+
+.activity-text p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+    color: inherit;
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+html.dark .activities-section,
+body.dark .activities-section,
+[data-theme="dark"] .activities-section {
+    background: #000000;
+    color: #f5f5f5;
+}
+
+html.dark .activities-content > h2,
+html.dark .activities-list > h3,
+html.dark .activity-text h4,
+html.dark .main-output-box p,
+body.dark .activities-content > h2,
+body.dark .activities-list > h3,
+body.dark .activity-text h4,
+body.dark .main-output-box p,
+[data-theme="dark"] .activities-content > h2,
+[data-theme="dark"] .activities-list > h3,
+[data-theme="dark"] .activity-text h4,
+[data-theme="dark"] .main-output-box p {
+    color: #f5f5f5;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .activities-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .activities-image,
+    .activities-image img {
+        min-height: 350px;
+        height: 350px;
+    }
+
+    .activities-content {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .activities-section {
+        padding: 55px 0;
+    }
+
+    .activities-image,
+    .activities-image img {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .activities-image-caption h3 {
+        font-size: 19px;
+    }
+
+    .main-output-box {
+        padding: 17px;
+        gap: 12px;
+    }
+
+    .activity-item {
+        gap: 12px;
+    }
+
+    .activity-number {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =================================================
+   ORGANISATIONAL OBJECTIVES
+================================================= */
+
+/* SECTION */
+.objectives-section {
+    padding: 85px 0;
+    background-color: #ffffff !important;
+    color: #242424;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* TWO-COLUMN LAYOUT */
+.objectives-section .welcome-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* =================================================
+   SECTION HEADING
+================================================= */
+
+.objectives-content .section-label {
+    display: inline-block;
+    color: var(--primary-color, #b68a35);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* Main heading */
+.objectives-content h2 {
+    font-size: clamp(30px, 3.5vw, 42px);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: #000000 !important;
+}
+
+/* Introduction paragraph */
+.objectives-content .objectives-intro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #000000 !important;
+    margin: 0 0 27px;
+    max-width: 570px;
+}
+
+
+/* =================================================
+   OBJECTIVES LIST
+================================================= */
+
+.objectives-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 28px;
+}
+
+/* Individual objective */
+.objective-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e9e9e9;
+
+    transition: transform 0.25s ease;
+}
+
+.objective-item:first-child {
+    padding-top: 0;
+}
+
+.objective-item:hover {
+    transform: translateX(5px);
+}
+
+.objective-item:last-child {
+    border-bottom: none;
+}
+
+
+/* =================================================
+   OBJECTIVE NUMBER
+================================================= */
+
+.objective-number {
+    flex-shrink: 0;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #f6f0e4;
+    color: var(--primary-color, #a77c2e);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =================================================
+   OBJECTIVE TEXT
+================================================= */
+
+.objective-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.objective-text h3 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+
+    margin: 2px 0 6px;
+
+    color: #292929;
+}
+
+.objective-text p {
+    font-size: 13px;
+    line-height: 1.7;
+
+    margin: 0;
+
+    color: #686868;
+}
+
+
+/* =================================================
+   OUTREACH LINK
+================================================= */
+
+.objectives-content .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    font-weight: 700;
+
+    transition: gap 0.25s ease;
+}
+
+.objectives-content .text-link:hover {
+    gap: 15px;
+}
+
+
+/* =================================================
+   OBJECTIVES IMAGE
+================================================= */
+
+.objectives-image {
+    position: relative;
+
+    min-height: 530px;
+
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.objectives-image img {
+    display: block;
+
+    width: 100%;
+    height: 530px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+
+/* =================================================
+   IMAGE CAPTION
+================================================= */
+
+.objectives-image-caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 45px 25px 25px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+
+    color: #ffffff;
+}
+
+.objectives-image-caption span {
+    display: inline-block;
+
+    color: #e5bd6b;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.objectives-image-caption h3 {
+    color: #ffffff;
+
+    font-size: 21px;
+    line-height: 1.4;
+
+    margin: 8px 0 0;
+}
+
+
+/* =================================================
+   DARK MODE
+   Supports html.dark, body.dark and data-theme
+================================================= */
+
+/* Section background */
+html.dark .objectives-section,
+body.dark .objectives-section,
+[data-theme="dark"] .objectives-section {
+    background-color: #000000 !important;
+    color: #f5f5f5;
+}
+
+/* Main heading and introduction */
+html.dark .objectives-content h2,
+html.dark .objectives-content .objectives-intro,
+
+body.dark .objectives-content h2,
+body.dark .objectives-content .objectives-intro,
+
+[data-theme="dark"] .objectives-content h2,
+[data-theme="dark"] .objectives-content .objectives-intro {
+    color: #ffffff !important;
+}
+
+/* Objective headings */
+html.dark .objective-text h3,
+body.dark .objective-text h3,
+[data-theme="dark"] .objective-text h3 {
+    color: #f5f5f5;
+}
+
+/* Objective descriptions */
+html.dark .objective-text p,
+body.dark .objective-text p,
+[data-theme="dark"] .objective-text p {
+    color: #c4c4c4;
+}
+
+/* Objective separators */
+html.dark .objective-item,
+body.dark .objective-item,
+[data-theme="dark"] .objective-item {
+    border-color: #303030;
+}
+
+/* Number backgrounds */
+html.dark .objective-number,
+body.dark .objective-number,
+[data-theme="dark"] .objective-number {
+    background: #292316;
+    color: #e5bd6b;
+}
+
+
+/* =================================================
+   RESPONSIVE DESIGN
+================================================= */
+
+@media (max-width: 900px) {
+
+    .objectives-section .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .objectives-image {
+        min-height: 400px;
+    }
+
+    .objectives-image img {
+        height: 400px;
+    }
+
+}
+
+
+/* =================================================
+   MOBILE DESIGN
+================================================= */
+
+@media (max-width: 550px) {
+
+    .objectives-section {
+        padding: 55px 0;
+    }
+
+    .objectives-content h2 {
+        font-size: 30px;
+    }
+
+    .objectives-image,
+    .objectives-image img {
+        min-height: 300px;
+        height: 300px;
+    }
+
+    .objective-item {
+        gap: 13px;
+        padding: 15px 0;
+    }
+
+    .objective-number {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+    }
+
+    .objectives-image-caption h3 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =================================================
+   ACCESSIBILITY
+================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .objective-item,
+    .objectives-content .text-link {
+        transition: none;
+    }
+
+}
+
+
+/* Force Objectives text to BLACK in light mode */
+html:not(.dark) .welcome-section .objectives-content h2,
+html:not(.dark) .welcome-section .objectives-content p.objectives-intro {
+    color: #000000 !important;
+}
+
+/* Keep them WHITE in dark mode */
+html.dark .welcome-section .objectives-content h2,
+html.dark .welcome-section .objectives-content p.objectives-intro {
+    color: #ffffff !important;
+}
+
+/* OBJECTIVES TEXT: LIGHT MODE */
+html:not(.dark) .objectives-content h2,
+html:not(.dark) .objectives-content .objectives-intro {
+    color: #000000 !important;
+}
+
+/* OBJECTIVES TEXT: DARK MODE */
+html.dark .objectives-content h2,
+html.dark .objectives-content .objectives-intro {
+    color: #ffffff !important;
+}
+
+/* Also support themes applied to the body */
+body.dark .objectives-content h2,
+body.dark .objectives-content .objectives-intro,
+[data-theme="dark"] .objectives-content h2,
+[data-theme="dark"] .objectives-content .objectives-intro {
+    color: #ffffff !important;
+}
