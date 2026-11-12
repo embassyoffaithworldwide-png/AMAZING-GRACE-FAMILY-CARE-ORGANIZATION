@@ -141,7 +141,7 @@ function renderHeader() {
 
 
 
-                  <!-- DESKTOP ACTIONS -->
+<!-- DESKTOP ACTIONS -->
 <div class="nav-action">
 
     <!-- THEME TOGGLE -->
@@ -163,48 +163,31 @@ function renderHeader() {
 </div>
 
 
-           <!-- GIVE -->
-<!--
-<a
-    href="#give"
-    class="give-btn"
-    data-open-give-modal
-    aria-haspopup="dialog"
+<!-- MOBILE MENU BUTTON -->
+<button
+    class="mobile-menu-btn"
+    id="mobile-menu-btn"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
 >
-    Give
-</a>
--->
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+</div>
 
 
+<!-- MOBILE MENU -->
+<div
+    class="mobile-menu"
+    id="mobile-menu"
+>
 
-                    <!-- MOBILE MENU BUTTON -->
-
-                    <button
-                        class="mobile-menu-btn"
-                        id="mobile-menu-btn"
-                        type="button"
-                        aria-label="Open menu"
-                        aria-expanded="false"
-                    >
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </button>
-
-                </div>
-
-
-
-                <!-- MOBILE MENU -->
-
-                <div
-                    class="mobile-menu"
-                    id="mobile-menu"
-                >
-
-                    <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
 
     <a href="about.html">About</a>
 
@@ -215,53 +198,38 @@ function renderHeader() {
     <a href="contact.html">Contact</a>
 
 
-           <!-- GIVE -->
-                    <a
-                        href="#give"
-                        class="mobile-give give-btn"
-                        data-open-give-modal
-                        aria-haspopup="dialog"
-                    >
-                        Give
-                    </a>
+    <!-- MOBILE THEME -->
+    <div class="mobile-theme-row">
 
--->
+        <span>
+            Appearance
+        </span>
 
-                    <!-- MOBILE THEME -->
+        <button
+            class="theme-toggle mobile-theme-toggle"
+            id="mobile-theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            title="Toggle light/dark mode"
+        >
 
-                    <div class="mobile-theme-row">
+            <span id="mobile-theme-icon">
+                ☾
+            </span>
 
-                        <span>
-                            Appearance
-                        </span>
+        </button>
 
+    </div>
 
-                        <button
-                            class="theme-toggle mobile-theme-toggle"
-                            id="mobile-theme-toggle"
-                            type="button"
-                            aria-label="Switch to dark mode"
-                            title="Toggle light/dark mode"
-                        >
+</div>
 
-                            <span id="mobile-theme-icon">
-                                ☾
-                            </span>
+</nav>
 
-                        </button>
+</header>
 
-                    </div>
+`;
 
-                </div>
-
-            </nav>
-
-        </header>
-
-    `;
-
-
-    setupMobileMenu();
+setupMobileMenu();
 
 }
 
