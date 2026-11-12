@@ -125,7 +125,7 @@ function renderHeader() {
 <a href="sermons.html">
     Sermons
 </a>
--->
+
 
                 <a href="community-outreach.html">Community Outreach</a>
 
