@@ -195,6 +195,8 @@ function renderHeader() {
 
     <a href="gallery.html">Gallery</a>
 
+    <a href="community-outreach.html">Community Outreach</a>
+
     <a href="contact.html">Contact</a>
 
 
